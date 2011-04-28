@@ -1,0 +1,81 @@
+///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+                             LTPS & GTEST Integration Project Notes
+
+
+////////////////////////////////////////     GTEST       //////////////////////////////////////////
+
+1) Read documentation on Gtest wiki:
+   1.1)  Getting started with Google C++
+        1.2)  Google C++ Testing Framework Samples
+	1.3)  Gave a look over more wiki links on gtest
+2) Download zip file gtest-1.6.0.zip
+3) Unzip gtest-1.6.0.zip
+4) README first
+5) Dependencies seems to be completed (from README)
+6) Following the conventional way to compile a Linux package
+7) $ ./configure
+8) $ make   (No errors so far, but still figuring it out)
+9) As describe over one blog I running make check
+10) It ran for a few time and through some outputs. Seems like it run a lot of test cases, the 
+output looks like the examples of the wiki, and actually some of the results looks familiar from 
+the samples, so I got it running now, but how? and why it ran the test cases with make check?
+11) Back to the README I just followed instructions there.
+12) Ran g++ -I${GTEST_DIR}/include -I${GTEST_DIR} -c ${GTEST_DIR}/src/gtest-all.cc
+13) Ran ar -rv libgtest.a gtest-all.o
+14) cd ${GTEST_DIR}/make
+15) make (Successfully created the binary)
+16) ./sample1_unittest
+17) It ran the unitary test case for one of the samples successfully Gtest1Test.log file attached
+18) Now create my own simple test, first created mymake folder.
+19) Created a function calling any Linux command using system()
+20) Created the test file with assertion
+21) Created the make file linking gtest  
+22) Test sample created.
+23) Ran the script successfully, log results added as GtestMyTestCase.log
+
+
+///////////////////////////////////////////     LTP       /////////////////////////////////////////
+
+1) Read Documentation on LTP web
+2) Download ltp project
+3) tar ltp.bz2
+4) Read documentation on doc/ 
+5) Read README
+6) Read INSTALL
+7) Installing missing requirements yacc and m4
+8) Running ./configure
+9) make all
+10) sudo make install
+11) /opt/ltp/runltp
+12) Test case started to run I did not how much time will it take, I went to sleep leaving the test 
+case, next morning, It did not finish, all processor and memory on my computer still high, and 
+the test output has reached the 40G so I kill it, and notice I have ran all the testcase given on 
+runtest/ 
+13) I wanted to run this time only one testcase command so I did 
+sudo ./runltp -f /opt/ltp/runtest/commands
+14) This time only ran the 18 test cases withing the commands test file, The output is being 
+attached as
+
+Important Note: I noticed late that I could install ltp without sudo permissions, 
+
+///////////////////////////// GTEST and LTP Integration    /////////////////////////////////////////
+
+1) Created ltpmake folder
+2) Created linunxcmd.cc with all the functions that will be calling LTP linux commands test cases
+3) I developed ld as an example of how I wanted to create all the test cases by reading each output
+of each individual test case script, so I did modify ld01 bash script test on LTP to save each
+test case output in a file, so the Gtest function could read it from a file and pass it to an 
+assertion. 
+4) The remaining test linux commands where checked only with the value returned by system()
+5) On LTP side created runtest/commands for each of the linux command there, so it can be invoke 
+individually by GTEST
+6) On Gtest site I created all the assertion on a single file, just to reduce the workload 
+7) Same thing with the Makefile, I did not wanted to invest time on making individual files.
+8) Ran Make
+9) Binary successfully created
+10) ./lnxcmd
+11) Results can be found as GLTPIntegrationtest.log
+
+Important Note: If I should installed LTP without sudo permission the gtest system calls would not
+needed the sudo. Not remove on purpose due lack of time. 
