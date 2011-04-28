@@ -1,0 +1,1 @@
+nm export TCdat=$LTPROOT/testcases/bin; nm01

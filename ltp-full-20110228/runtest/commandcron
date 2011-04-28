@@ -1,0 +1,1 @@
+cron export TCdat=$LTPROOT/testcases/bin; cron_tests.sh

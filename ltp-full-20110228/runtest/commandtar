@@ -1,0 +1,1 @@
+tar export TCdat=$LTPROOT/testcases/bin; tar_tests.sh

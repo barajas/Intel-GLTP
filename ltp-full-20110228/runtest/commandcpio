@@ -1,0 +1,1 @@
+cpio export TCdat=$LTPROOT/testcases/bin; cpio_tests.sh

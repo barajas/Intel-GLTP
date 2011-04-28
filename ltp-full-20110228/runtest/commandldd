@@ -1,0 +1,1 @@
+ldd export TCdat=$LTPROOT/testcases/bin; ldd01

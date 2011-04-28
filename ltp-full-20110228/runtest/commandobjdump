@@ -1,0 +1,1 @@
+objdump export TCsrc=$LTPROOT/testcases/bin; objdump01

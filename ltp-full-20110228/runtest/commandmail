@@ -1,0 +1,1 @@
+mail export TCdat=$LTPROOT/testcases/bin; mail_tests.sh
