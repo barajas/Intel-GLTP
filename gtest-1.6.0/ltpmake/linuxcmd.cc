@@ -19,25 +19,25 @@ int lda(int assertion)
   switch (assertion)
     {
      case 1:
-       fd = fopen("/home/barajas/lda1.txt", "r");
+       fd = fopen("/tmp/lda1.txt", "r");
        break;
      case 2:
-       fd = fopen("/home/barajas/lda2.txt", "r");
+       fd = fopen("/tmp/lda2.txt", "r");
        break;
      case 3:
-       fd = fopen("/home/barajas/lda3.txt", "r");
+       fd = fopen("/tmp/lda3.txt", "r");
        break;
      case 4:
-       fd = fopen("/home/barajas/lda4.txt", "r");
+       fd = fopen("/tmp/lda4.txt", "r");
        break;
      case 5:
-       fd = fopen("/home/barajas/lda5.txt", "r");
+       fd = fopen("/tmp/lda5.txt", "r");
        break;
      case 6:
-       fd = fopen("/home/barajas/lda6.txt", "r");
+       fd = fopen("/tmp/lda6.txt", "r");
        break;
      case 7:
-       fd = fopen("/home/barajas/lda7.txt", "r");
+       fd = fopen("/tmp/lda7.txt", "r");
        break;
     default:
       ;
