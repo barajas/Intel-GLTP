@@ -1,0 +1,19 @@
+README
+
+Quick instructions
+
+1) Download: $ git clone git@github.com:barajas/Intel-GLTP.git
+2) Building Gtest $ cd gtest-1.6.0
+3) Install package dependencies see README
+4) $ ./configure 
+5) $ make
+6) Compiling  LTP $ cd ltp-full-20110228
+7) Check and install dependencies
+8) $ ./configure
+9) $ make all
+10) $sudo make install 
+11) Compile my first gtest $ cd mymake/
+12) $ make
+13) $./sample_uname
+14) $ cd ltpmake
+15) ./lnxcmd
