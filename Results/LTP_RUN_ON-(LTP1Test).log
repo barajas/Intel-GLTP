@@ -1,0 +1,30 @@
+Test Start Time: Sun Apr 24 14:21:54 2011
+-----------------------------------------
+Testcase                       Result     Exit Value
+--------                       ------     ----------
+ar                             PASS       0    
+ld                             PASS       0    
+ldd                            PASS       0    
+nm                             PASS       0    
+objdump                        PASS       0    
+file                           PASS       0    
+tar                            PASS       0    
+cron                           FAIL       4    
+logrotate                      PASS       0    
+mail                           FAIL       2    
+cpio                           PASS       0    
+unzip01                        PASS       0    
+gzip01                         PASS       0    
+cp_tests01                     PASS       0    
+ln_tests01                     PASS       0    
+mkdir_tests01                  PASS       0    
+mv_tests01                     PASS       0    
+size01                         PASS       0    
+
+-----------------------------------------------
+Total Tests: 18
+Total Failures: 2
+Kernel Version: 2.6.32-30-generic
+Machine Architecture: x86_64
+Hostname: perversa
+

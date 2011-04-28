@@ -1,0 +1,22 @@
+barajas@perversa:~/gtest-1.6.0/mymake$ ./sample_uname 
+Running main() from gtest_main.cc
+[==========] Running 1 test from 1 test case.
+[----------] Global test environment set-up.
+[----------] 1 test from uname
+[ RUN      ] uname.SIMPLECALL
+Ok
+Executing command uname -r...
+2.6.32-30-generic
+Value returned: 0
+Ok
+Executing command uname -r...
+2.6.32-30-generic
+Value returned: 0
+[       OK ] uname.SIMPLECALL (9 ms)
+[----------] 1 test from uname (9 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test case ran. (9 ms total)
+[  PASSED  ] 1 test.
+barajas@perversa:~/gtest-1.6.0/mymake$ 
+

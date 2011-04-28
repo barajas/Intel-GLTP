@@ -1,0 +1,651 @@
+barajas@perversa:/opt/ltp$ sudo ./runltp -f /opt/ltp/runtest/commands 
+INFO: creating /opt/ltp/results directory
+Checking for required user/group ids
+
+If some fields are empty or look unusual you may have an old version.
+Compare to the current minimal requirements in Documentation/Changes.
+ 
+DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=10.04
+DISTRIB_CODENAME=lucid
+DISTRIB_DESCRIPTION="Ubuntu 10.04.2 LTS"
+Linux perversa 2.6.32-30-generic #59-Ubuntu SMP Tue Mar 1 21:30:46 UTC 2011 x86_64 GNU/Linux
+ 
+'nobody' user id and group found.
+'bin' user id and group found.
+'daemon' user id and group found.
+Users group found.
+Sys group found.
+Gnu C                  gcc (Ubuntu 4.4.3-4ubuntu5) 4.4.3
+Required users/groups exist.
+Gnu make               3.81
+util-linux             ng 2.17.2)
+mount                  ng 2.17.2 (with libblkid and selinux support)
+modutils               3.11.1
+e2fsprogs              1.41.11
+PPP                    2.4.5
+Linux C Library        2.11.1
+Dynamic linker (ldd)   2.11.1
+Procps                 3.2.8
+Net-tools              1.60
+iproute2              iproute2-ss091226
+Kbd                    1.15
+Sh-utils               7.4
+Modules Loaded         mmc_block nls_iso8859_1 nls_cp437 vfat fat usb_storage binfmt_misc ppdev snd_hda_codec_intelhdmi fbcon tileblit font bitblit softcursor vga16fb vgastate usbhid snd_hda_intel snd_hda_codec snd_hwdep snd_pcm_oss snd_mixer_oss snd_pcm snd_seq_dummy snd_seq_oss snd_seq_midi arc4 snd_rawmidi snd_seq_midi_event snd_seq hid iwlagn iwlcore mac80211 compat_firmware_class snd_timer snd_seq_device i915 drm_kms_helper cfg80211 jme mii psmouse jmb38x_ms serio_raw memstick snd sdhci_pci sdhci asus_laptop led_class uvcvideo videodev soundcore v4l1_compat v4l2_compat_ioctl32 snd_page_alloc drm i2c_algo_bit video output intel_agp lp parport ahci
+
+free reports:
+             total       used       free     shared    buffers     cached
+Mem:       3843464    2581804    1261660          0     404540     980316
+-/+ buffers/cache:    1196948    2646516
+Swap:      7045112     521732    6523380
+
+/proc/cpuinfo
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz
+stepping	: 5
+cpu MHz		: 933.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz
+stepping	: 5
+cpu MHz		: 933.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 2
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4787.99
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz
+stepping	: 5
+cpu MHz		: 933.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 0
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4788.05
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 37
+model name	: Intel(R) Core(TM) i3 CPU       M 370  @ 2.40GHz
+stepping	: 5
+cpu MHz		: 933.000
+cache size	: 3072 KB
+physical id	: 0
+siblings	: 4
+core id		: 2
+cpu cores	: 2
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 11
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good xtopology nonstop_tsc aperfmperf pni dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 popcnt lahf_lm arat tpr_shadow vnmi flexpriority ept vpid
+bogomips	: 4787.86
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+remove test cases which require the block device.
+You can specify it with option -b
+COMMAND:    /opt/ltp/bin/ltp-pan  -e -S   -a 8631     -n 8631  -p  -f /tmp/ltp-Ak7gulINIw/alltests -l /opt/ltp/results/LTP_RUN_ON-2011_Apr_24-14h_21m_54s.log  -C /opt/ltp/output/LTP_RUN_ON-2011_Apr_24-14h_21m_54s.failed
+-e LOG File: /opt/ltp/results/LTP_RUN_ON-2011_Apr_24-14h_21m_54s.log
+-e FAILED COMMAND File: /opt/ltp/output/LTP_RUN_ON-2011_Apr_24-14h_21m_54s.failed
+Running tests.......
+<<<test_start>>>
+tag=ar stime=1303672914
+cmdline="export TCdat=$LTPROOT/testcases/bin; ar01"
+contacts=""
+analysis=exit
+<<<test_output>>>
+-------System test for ar command, Loop 1----
+-)1
+-)2
+-)3
+-)4
+-)5
+-)6
+-)7
+-)8
+-)9
+-)10
+-)11
+-)12
+-)13
+-)14
+-)15
+-)16
+-)17 SKIPPED due to binutils ar automatically adds a symbol.
+-)18
+-)19 SKIPPED due to binutils ar automatically adds a symbol.
+-)20
+-)21
+-)22
+-)23
+-)24
+-)25
+-)26 SKIPPED UNDER PAN
+ar: creating /tmp/ar01-8742/lib.a
+-)27
+ar: creating /tmp/ar01-8742/lib.a
+-)28
+ar: creating /tmp/ar01-8742/lib.a
+-)29
+ar: creating /tmp/ar01-8742/lib.a
+-)30
+ar: creating /tmp/ar01-8742/lib.a
+-)31
+---------------ar command passed the system test-----------------
+<<<execution_status>>>
+initiation_status="ok"
+duration=8 termination_type=exited termination_id=0 corefile=no
+cutime=139 cstime=30
+<<<test_end>>>
+<<<test_start>>>
+tag=ld stime=1303672922
+cmdline="export TCdat=$LTPROOT/testcases/bin; ld01"
+contacts=""
+analysis=exit
+<<<test_output>>>
+Assertion 1 ..................
+-)
+Assertion 2 ..................
+-)
+Assertion 3 ..................
+-)
+Assertion 4 ..................
+-)
+Assertion 5 ..................
+-)
+Assertion 6 ..................
+-)
+Assertion 7 ..................
+-)
+ld: PASS
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=28 cstime=6
+<<<test_end>>>
+<<<test_start>>>
+tag=ldd stime=1303672922
+cmdline="export TCdat=$LTPROOT/testcases/bin; ldd01"
+contacts=""
+analysis=exit
+<<<test_output>>>
+  ASSERTION 1  
+	/tmp/ldd01-9076/lddfile1.obj.so (0x00007fc268f12000)
+	/tmp/ldd01-9076/lddfile2.obj.so (0x00007fc268d10000)
+	/tmp/ldd01-9076/lddfile3.obj.so (0x00007fc268b0d000)
+	/tmp/ldd01-9076/lddfile4.obj.so (0x00007fc26890b000)
+	/tmp/ldd01-9076/lddfile5.obj.so (0x00007fc268709000)
+ASSERTION #1 PASS
+ ASSERTION 2  
+	/tmp/ldd01-9076/lddfile1.obj.so (0x00007fbb404a0000)
+	/tmp/ldd01-9076/lddfile2.obj.so (0x00007fbb4029e000)
+	/tmp/ldd01-9076/lddfile3.obj.so (0x00007fbb4009b000)
+	/tmp/ldd01-9076/lddfile4.obj.so (0x00007fbb3fe99000)
+	/tmp/ldd01-9076/lddfile5.obj.so (0x00007fbb3fc97000)
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+	/tmp/ldd01-9076/lddfile1.obj.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+	/tmp/ldd01-9076/lddfile2.obj.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+	/tmp/ldd01-9076/lddfile3.obj.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+	/tmp/ldd01-9076/lddfile4.obj.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+	/tmp/ldd01-9076/lddfile5.obj.so:
+		libc.so.6 (GLIBC_2.2.5) => /lib/libc.so.6
+		libc.so.6 (GLIBC_2.3.4) => /lib/libc.so.6
+		ld-linux-x86-64.so.2 (GLIBC_PRIVATE) => /lib64/ld-linux-x86-64.so.2
+		ld-linux-x86-64.so.2 (GLIBC_2.3) => /lib64/ld-linux-x86-64.so.2
+ASSERTION #2 PASS
+TEST PASSES
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=39 cstime=8
+<<<test_end>>>
+<<<test_start>>>
+tag=nm stime=1303672923
+cmdline="export TCdat=$LTPROOT/testcases/bin; nm01 "
+contacts=""
+analysis=exit
+<<<test_output>>>
+-------System test for nm command------
+-)1
+-)2
+-)3
+-)4
+-)5
+-)6
+-)7
+-)8
+nm01: PASS
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=56 cstime=16
+<<<test_end>>>
+<<<test_start>>>
+tag=objdump stime=1303672924
+cmdline="export TCsrc=$LTPROOT/testcases/bin; objdump01"
+contacts=""
+analysis=exit
+<<<test_output>>>
+1
+2
+3
+4
+5
+6
+7
+7
+8
+9
+10
+11
+12
+13
+14
+objdump -f
+objdump -h
+objdump -R
+objdump -r
+objdump -t
+objdump -f --show-raw-insn
+objdump -h --show-raw-insn
+objdump -s --show-raw-insn
+objdump -t --show-raw-insn
+objdump -R --show-raw-insn
+objdump -r --show-raw-insn
+objdump -T
+objdump -a
+objdump -a --show-raw-insn
+objdump --debugging
+PASS
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=50 cstime=5
+<<<test_end>>>
+<<<test_start>>>
+tag=file stime=1303672924
+cmdline="export TCdat=$LTPROOT/testcases/bin; file_test.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+file01      0  TINFO  :  TEST #1: file command recogizes ASCII text files
+file01      1  TPASS  :  file: Recognised ASCII file correctly
+file02      0  TINFO  :  TEST #2: file command recognizes bash shell scripts
+file02      2  TPASS  :  file: Recognised bash shell script correctly
+file03      0  TINFO  :  TEST #3: file command recognizes korn shell scripts
+file03      3  TPASS  :  file: recognised korn shell script
+file04      0  TINFO  :  TEST #4: file command recognizes C shell scripts
+file04      4  TPASS  :  file: Recognised C shell script correctly
+file05      0  TINFO  :  TEST #5: file command recognizes C programs text
+file05      5  TPASS  :  file: Recognised C program text correctly
+file06      0  TINFO  :  TEST #6: file command recognizes ELF executables
+file06      6  TPASS  :  file: Recognized ELF binary executable
+file07      0  TINFO  :  TEST #7: file command recognizes tar files.
+file07      7  TPASS  :  file: Recognised tar files
+file08      0  TINFO  :  TEST #8: file command recognizes tar zip files
+file08      8  TPASS  :  file: Recognised tar zip file
+file09      0  TINFO  :  TEST #9: file command recognizes RPM files
+file09      9  TPASS  :  file: Recognised RPM file correctly
+file10      0  TINFO  :  TEST #10: file command recognizes vmlinu file
+file10     10  TPASS  :  file: Recognised vmlinu file correctly
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=43 cstime=16
+<<<test_end>>>
+<<<test_start>>>
+tag=tar stime=1303672924
+cmdline="export TCdat=$LTPROOT/testcases/bin; tar_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+tar01       0  TINFO  :  TEST #1: tar command with cvf options creates an archive file
+tar01       1  TPASS  :  tar: cvf option created a tar file.
+tar02       0  TINFO  :  TEST #1: tar command with tvf options lists all files in an archive file
+tar02       2  TPASS  :  tar: tvf option listed all its contents
+tar03       0  TINFO  :  TEST #3: tar command with zcvf options creates an compressed archive file
+tar03       3  TPASS  :  tar: zcvf option created a compressed tar file.
+tar04       0  TINFO  :  TEST #4: tar command with xvf options extracts files from an archive file
+tar04       4  TPASS  :  tar: xvf option extracted the archive file.
+tar05       0  TINFO  :  TEST #5: tar command with zxvf options extracts a compressed archive file
+tar05       0  TINFO  :  tar: zcvf option created a compressed tar file.
+tar05       5  TPASS  :  tar: zxvf option extracted the compressed archive file.
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=22 cstime=2
+<<<test_end>>>
+<<<test_start>>>
+tag=cron stime=1303672924
+cmdline="export TCdat=$LTPROOT/testcases/bin; cron_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+cron01      0  TINFO  :  Test #1: crontab <filename> installs the crontab file
+cron01      0  TINFO  :  Test #1: cron schedules the job listed in crontab file.
+cron01      0  TINFO  :  Test #1: Installing cron job ... 
+cron01      0  TINFO  :  Test #1: Cronjob installed successfully
+cron01      1  TFAIL  :  Test #1: crontab activity not recorded in /var/log/messages.
+cron01      0  TINFO  :  Test #1: Values are good: 
+    Expected 25;     Received 25
+cron01      0  TINFO  :  Test #1: Values are good: 
+    Expected 26;     Received 26
+cron01      0  TINFO  :  Test #1: Values are good: 
+    Expected 27;     Received 27
+cron01      0  TINFO  :  Test #1: Values are good: 
+    Expected 28;     Received 28
+cron01      0  TINFO  :  Test #1: Values are good: 
+    Expected 29;     Received 29
+cron01      1  TFAIL  :  Test #1: Test failed. Reason:
+cron02      0  TINFO  :  Test #2: crontab -r removes the crontab file.
+cron02      0  TINFO  :  Test #2: installing crontab file.
+cron02      2  TFAIL  :  Test #2: crontab activity not recorded in var/log/messages.
+cron02      0  TINFO  :  Test #2: uninstalling crontab file.
+cron02      2  TFAIL  :  Test #2: crontab activity not recorded in var/log/messages.
+cron03      0  TINFO  :  Test #3: crontab -l lists the cronjobs installed
+cron03      0  TINFO  :  Test #3: installing crontab file ...
+cron03      0  TINFO  :  Test #3: Cron job installed.
+cron03      0  TINFO  :  Test #3: crontab -l listed cronjob tst2_cronprg.sh
+cron03      0  TINFO  :  Test #3: uninstalling crontab file.
+cron03      0  TINFO  :  crontab uninstalled all jobs for user
+cron03      3  TPASS  :  crontab did not list any cronjobs
+<<<execution_status>>>
+initiation_status="ok"
+duration=439 termination_type=exited termination_id=4 corefile=no
+cutime=63 cstime=12
+<<<test_end>>>
+<<<test_start>>>
+tag=logrotate stime=1303673363
+cmdline="export TCdat=$LTPROOT/testcases/bin; logrotate_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+logrotate01    0  TINFO  :  Test #1: create a configfile /tmp/ltp-Ak7gulINIw/tst_logrotate.9901/var_mesg.config
+logrotate01    0  TINFO  :  Test #1: use logrotate -f <config> to force rotation
+logrotate01    0  TINFO  :  Test #1: this will rotate the log file according to
+logrotate01    0  TINFO  :  Test #1: the specification in the configfile.
+logrotate01    0  TINFO  :  Test #1: 1. rotate /var/log/tst_logfile file.
+logrotate01    0  TINFO  :  Test #1: 2. compresses it.
+logrotate01    1  TPASS  :  Test #1: logrotate created a compressed file.
+logrotate01    0  TINFO  :  CLEAN: removing all cron jobs.
+logrotate01    0  TINFO  :  CLEAN: removing /tmp/ltp-Ak7gulINIw/tst_logrotate.9901
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=39 cstime=6
+<<<test_end>>>
+<<<test_start>>>
+tag=mail stime=1303673364
+cmdline="export TCdat=$LTPROOT/testcases/bin; mail_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+mail_tests::setup    0  TINFO  :  INIT: Removing all mails for mail_test and root
+mail_tests::mail01    0  TINFO  :  Test #1: mail root@localhost will send mail to root
+mail_tests::mail01    0  TINFO  :  Test #1: user on local machine.
+mail_tests::mail01    1  TPASS  :  Test #1: Mail was sent to root & was received
+mail_tests::mail02    0  TINFO  :  Test #2: mail user@bad-domain will result in failure
+mail_tests::mail02    0  TINFO  :  Test #2: to deliver the mail. Mailer daemon should
+mail_tests::mail02    0  TINFO  :  Test #2: report this failure.
+mail_tests::mail02    2  TFAIL  :  Test #2: No new mail for root. Reason:
+No mail for root
+mail_tests::mail03    0  TINFO  :  Test #3: mail non_existent_user@localhost will fail
+mail_tests::mail03    0  TINFO  :  Test #3: to deliver the mail. Mailer daemon should
+mail_tests::mail03    0  TINFO  :  Test #3: report this failure.
+mail_tests::mail03    3  TFAIL  :  Test #3: No new mail for root. Reason:
+No mail for root
+mail_tests::mail04    0  TINFO  :  Test #4: Test that mail -c user@domain will
+mail_tests::mail04    0  TINFO  :  Test #4: carbon copy user@domain
+mail_tests::mail04    4  TPASS  :  Test #4: Mail was carbon copied to user mail_test
+mail_tests::mail05    0  TINFO  :  Test #5: Test that mail -b user@domain will
+mail_tests::mail05    0  TINFO  :  Test #5: blind carbon copy user@domain
+mail_tests::mail05    5  TPASS  :  Test #5: Mail was carbon copied to user mail_test
+mail_tests::cleanup    0  TINFO  :  Test CLEAN: Removing temporary files from /tmp
+mail_tests::cleanup    0  TINFO  :  Test CLEAN: Removing temporary user mail_test
+<<<execution_status>>>
+initiation_status="ok"
+duration=30 termination_type=exited termination_id=2 corefile=no
+cutime=47 cstime=8
+<<<test_end>>>
+<<<test_start>>>
+tag=cpio stime=1303673394
+cmdline="export TCdat=$LTPROOT/testcases/bin; cpio_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+cpio        0  TINFO  :  INIT: Inititalizing tests.
+cpio01      0  TINFO  :  Test #1: cpio -o will create an archive.
+cpio01      1  TPASS  :  Test #1: cpio created an archive
+cpio        0  TINFO  :  CLEAN cleaning up before return
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=29 cstime=5
+<<<test_end>>>
+<<<test_start>>>
+tag=unzip01 stime=1303673395
+cmdline="unzip_tests.sh $LTPROOT/testcases/data/tst_unzip_file.zip"
+contacts=""
+analysis=exit
+<<<test_output>>>
+  File: `/opt/ltp/testcases/data/tst_unzip_file.zip'
+  Size: 2296      	Blocks: 8          IO Block: 4096   regular file
+Device: 806h/2054d	Inode: 7210298     Links: 1
+Access: (0644/-rw-r--r--)  Uid: (    0/    root)   Gid: (    0/    root)
+Access: 2011-04-20 23:44:52.026979417 -0500
+Modify: 2011-04-20 23:44:52.026979417 -0500
+Change: 2011-04-20 23:44:52.026979417 -0500
+unzip01     0  TINFO  :  Test #1: unzip command un-compresses a .zip file.
+unzip01     0  TINFO  :  Test #1: check if "/opt/ltp/testcases/bin/10073.uYaFoU/tst_unzip.dir" exits.
+unzip01     0  TINFO  :  Test #1: "/opt/ltp/testcases/bin/10073.uYaFoU/tst_unzip.dir" was created by unzip
+unzip01     1  TPASS  :  Test #1: unzip can uncompress .zip file correctly.
+unzip01     0  TINFO  :  CLEAN: removing "10073.uYaFoU"
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=16 cstime=3
+<<<test_end>>>
+<<<test_start>>>
+tag=gzip01 stime=1303673395
+cmdline="gzip_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+gzip        0  TINFO  :  INIT: Inititalizing tests.
+gzip01      0  TINFO  :  Test #1: gzip -r will recursively compress contents of directory
+gzip01      0  TINFO  :  Test #1: Creating 10 directories.
+gzip01      0  TINFO  :  Test #1: filling each dir with 10 files.
+gzip01      0  TINFO  :  Test #1: creating output file
+gzip01      0  TINFO  :  Test #1: creating expected output file
+gzip01      0  TINFO  :  Test #1: comparing expected out and actual output file
+gzip01      0  TINFO  :  Test #1: expected same as actual
+gzip01      1  TPASS  :  Test #1: gzip -r success
+gzip        0  TINFO  :  INIT: Inititalizing tests.
+gunzip01    0  TINFO  :  Test #2: gunzip -r will recursively uncompress contents of directory
+gunzip01    0  TINFO  :  Test #2: Creating 10 directories.
+gunzip01    0  TINFO  :  Test #2: filling each dir with 10 files.
+gunzip01    0  TINFO  :  Test #2: creating output file
+gunzip01    0  TINFO  :  Test #2: creating expected output file
+gunzip01    0  TINFO  :  Test #2: comparing expected out and actual output file
+gunzip01    0  TINFO  :  Test #2: expected same as actual
+gunzip01    1  TPASS  :  Test #2: gunzip -r success
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=182 cstime=17
+<<<test_end>>>
+<<<test_start>>>
+tag=cp_tests01 stime=1303673395
+cmdline="cp_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+cp          0  TINFO  :  INIT: Inititalizing tests.
+cp01        0  TINFO  :  Test #1: cp -R will recursively cp contents of directory
+cp01        0  TINFO  :  Test #1: Creating 10 directories.
+cp01        0  TINFO  :  Test #1: filling each dir with 10 files.
+cp01        0  TINFO  :  Test #1: creating output file
+cp01        0  TINFO  :  Test #1: creating expected output file
+cp01        0  TINFO  :  Test #1: comparing expected out and actual output file
+cp01        0  TINFO  :  Test #1: expected same as actual
+cp01        1  TPASS  :  Test #1: cp -R success
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=102 cstime=21
+<<<test_end>>>
+<<<test_start>>>
+tag=ln_tests01 stime=1303673395
+cmdline="ln_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+ln          0  TINFO  :  INIT: Inititalizing tests.
+ln01        0  TINFO  :  Test #1: ln -s will make symbolic links instead of hard links
+ln01        0  TINFO  :  Test #1: Creating 10 directories.
+ln01        0  TINFO  :  Test #1: filling each dir with 10 files.
+ln01        0  TINFO  :  Test #1: creating output file
+ln01        0  TINFO  :  Test #1: creating expected output file
+ln01        0  TINFO  :  Test #1: comparing expected out and actual output file
+ln01        0  TINFO  :  Test #1: expected same as actual
+ln01        1  TPASS  :  Test #1: ln -s success
+<<<execution_status>>>
+initiation_status="ok"
+duration=1 termination_type=exited termination_id=0 corefile=no
+cutime=106 cstime=12
+<<<test_end>>>
+<<<test_start>>>
+tag=mkdir_tests01 stime=1303673396
+cmdline="mkdir_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+mkdir       0  TINFO  :  INIT: Inititalizing tests.
+mkdir01     0  TINFO  :  Test #1: mkdir -p will recursively mkdir contents of directory
+mkdir01     0  TINFO  :  Test #1: Creating 10 directories.
+mkdir01     0  TINFO  :  Test #1: filling each dir with 10 files.
+mkdir01     0  TINFO  :  Test #1: creating output file
+mkdir01     0  TINFO  :  Test #1: creating expected output file
+mkdir01     0  TINFO  :  Test #1: comparing expected out and actual output file
+mkdir01     0  TINFO  :  Test #1: expected same as actual
+mkdir01     1  TPASS  :  Test #1: mkdir -R success
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=97 cstime=14
+<<<test_end>>>
+<<<test_start>>>
+tag=mv_tests01 stime=1303673396
+cmdline="mv_tests.sh"
+contacts=""
+analysis=exit
+<<<test_output>>>
+mv          0  TINFO  :  INIT: Inititalizing tests.
+mv01        0  TINFO  :  Test #1: mv <dir1> <dir2> will move dir1 to dir2 and all its contents
+mv01        0  TINFO  :  Test #1: Creating 10 directories.
+mv01        0  TINFO  :  Test #1: filling each dir with 10 files.
+mv01        0  TINFO  :  Test #1: creating output file
+mv01        0  TINFO  :  Test #1: creating expected output file
+mv01        0  TINFO  :  Test #1: comparing expected out and actual output file
+mv01        0  TINFO  :  Test #1: expected same as actual
+mv01        1  TPASS  :  Test #1: mv success
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=78 cstime=13
+<<<test_end>>>
+<<<test_start>>>
+tag=size01 stime=1303673396
+cmdline="size01"
+contacts=""
+analysis=exit
+<<<test_output>>>
+incrementing stop
+size 
+size -V
+size -o
+size -x
+Test Result: PASS
+<<<execution_status>>>
+initiation_status="ok"
+duration=0 termination_type=exited termination_id=0 corefile=no
+cutime=17 cstime=1
+<<<test_end>>>
+INFO: ltp-pan reported some tests FAIL
+LTP Version: LTP-20100831
+        
+       ###############################################################"
+        
+            Done executing testcases."
+            LTP Version:  LTP-20100831
+       ###############################################################"
+       
+barajas@perversa:/opt/ltp$ 
+

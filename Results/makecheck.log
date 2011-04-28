@@ -1,0 +1,2240 @@
+barajas@perversa:~/gtest-1.6.0$ make check
+mkdir -p "./fused-src"
+chmod -R u+w "./fused-src"
+rm -f "./fused-src/gtest/gtest-all.cc"
+rm -f "./fused-src/gtest/gtest.h"
+"./scripts/fuse_gtest_files.py" "./fused-src"
+./scripts/fuse_gtest_files.py:63: DeprecationWarning: the sets module is deprecated
+  import sets
+cp -f "./src/gtest_main.cc" "./fused-src/gtest/"
+make  samples/sample1_unittest samples/sample10_unittest test/gtest_all_test test/fused_gtest_test
+make[1]: Entering directory `/home/barajas/gtest-1.6.0'
+mkdir -p "./fused-src"
+chmod -R u+w "./fused-src"
+rm -f "./fused-src/gtest/gtest-all.cc"
+rm -f "./fused-src/gtest/gtest.h"
+"./scripts/fuse_gtest_files.py" "./fused-src"
+./scripts/fuse_gtest_files.py:63: DeprecationWarning: the sets module is deprecated
+  import sets
+cp -f "./src/gtest_main.cc" "./fused-src/gtest/"
+depbase=`echo samples/sample1_unittest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I. -I./include  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT samples/sample1_unittest.o -MD -MP -MF $depbase.Tpo -c -o samples/sample1_unittest.o samples/sample1_unittest.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool --tag=CXX   --mode=link g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2   -o samples/sample1_unittest samples/sample1_unittest.o lib/libgtest_main.la lib/libgtest.la samples/libsamples.la 
+libtool: link: g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -o samples/.libs/sample1_unittest samples/sample1_unittest.o  lib/.libs/libgtest_main.so lib/.libs/libgtest.so samples/.libs/libsamples.a -pthread
+depbase=`echo samples/sample10_unittest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I. -I./include  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT samples/sample10_unittest.o -MD -MP -MF $depbase.Tpo -c -o samples/sample10_unittest.o samples/sample10_unittest.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool --tag=CXX   --mode=link g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2   -o samples/sample10_unittest samples/sample10_unittest.o lib/libgtest.la 
+libtool: link: g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -o samples/.libs/sample10_unittest samples/sample10_unittest.o  lib/.libs/libgtest.so -pthread
+depbase=`echo test/gtest_all_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+	g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I. -I./include  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT test/gtest_all_test.o -MD -MP -MF $depbase.Tpo -c -o test/gtest_all_test.o test/gtest_all_test.cc &&\
+	mv -f $depbase.Tpo $depbase.Po
+/bin/bash ./libtool --tag=CXX   --mode=link g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2   -o test/gtest_all_test test/gtest_all_test.o lib/libgtest_main.la lib/libgtest.la 
+libtool: link: g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -o test/.libs/gtest_all_test test/gtest_all_test.o  lib/.libs/libgtest_main.so lib/.libs/libgtest.so -pthread
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT fused-src/gtest/test_fused_gtest_test-gtest-all.o -MD -MP -MF fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.o `test -f 'fused-src/gtest/gtest-all.cc' || echo './'`fused-src/gtest/gtest-all.cc
+mv -f fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Tpo fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Po
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT fused-src/gtest/test_fused_gtest_test-gtest_main.o -MD -MP -MF fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.o `test -f 'fused-src/gtest/gtest_main.cc' || echo './'`fused-src/gtest/gtest_main.cc
+mv -f fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Tpo fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Po
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT samples/test_fused_gtest_test-sample1.o -MD -MP -MF samples/.deps/test_fused_gtest_test-sample1.Tpo -c -o samples/test_fused_gtest_test-sample1.o `test -f 'samples/sample1.cc' || echo './'`samples/sample1.cc
+mv -f samples/.deps/test_fused_gtest_test-sample1.Tpo samples/.deps/test_fused_gtest_test-sample1.Po
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT samples/test_fused_gtest_test-sample1_unittest.o -MD -MP -MF samples/.deps/test_fused_gtest_test-sample1_unittest.Tpo -c -o samples/test_fused_gtest_test-sample1_unittest.o `test -f 'samples/sample1_unittest.cc' || echo './'`samples/sample1_unittest.cc
+mv -f samples/.deps/test_fused_gtest_test-sample1_unittest.Tpo samples/.deps/test_fused_gtest_test-sample1_unittest.Po
+/bin/bash ./libtool --tag=CXX   --mode=link g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2   -o test/fused_gtest_test fused-src/gtest/test_fused_gtest_test-gtest-all.o fused-src/gtest/test_fused_gtest_test-gtest_main.o samples/test_fused_gtest_test-sample1.o samples/test_fused_gtest_test-sample1_unittest.o  
+libtool: link: g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -o test/fused_gtest_test fused-src/gtest/test_fused_gtest_test-gtest-all.o fused-src/gtest/test_fused_gtest_test-gtest_main.o samples/test_fused_gtest_test-sample1.o samples/test_fused_gtest_test-sample1_unittest.o  -pthread
+make[1]: Leaving directory `/home/barajas/gtest-1.6.0'
+make  check-TESTS
+make[1]: Entering directory `/home/barajas/gtest-1.6.0'
+mkdir -p "./fused-src"
+chmod -R u+w "./fused-src"
+rm -f "./fused-src/gtest/gtest-all.cc"
+rm -f "./fused-src/gtest/gtest.h"
+"./scripts/fuse_gtest_files.py" "./fused-src"
+./scripts/fuse_gtest_files.py:63: DeprecationWarning: the sets module is deprecated
+  import sets
+cp -f "./src/gtest_main.cc" "./fused-src/gtest/"
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT fused-src/gtest/test_fused_gtest_test-gtest-all.o -MD -MP -MF fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest-all.o `test -f 'fused-src/gtest/gtest-all.cc' || echo './'`fused-src/gtest/gtest-all.cc
+mv -f fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Tpo fused-src/gtest/.deps/test_fused_gtest_test-gtest-all.Po
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT fused-src/gtest/test_fused_gtest_test-gtest_main.o -MD -MP -MF fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Tpo -c -o fused-src/gtest/test_fused_gtest_test-gtest_main.o `test -f 'fused-src/gtest/gtest_main.cc' || echo './'`fused-src/gtest/gtest_main.cc
+mv -f fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Tpo fused-src/gtest/.deps/test_fused_gtest_test-gtest_main.Po
+g++ -DHAVE_CONFIG_H -I. -I./build-aux  -I"./fused-src"  -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -MT samples/test_fused_gtest_test-sample1_unittest.o -MD -MP -MF samples/.deps/test_fused_gtest_test-sample1_unittest.Tpo -c -o samples/test_fused_gtest_test-sample1_unittest.o `test -f 'samples/sample1_unittest.cc' || echo './'`samples/sample1_unittest.cc
+mv -f samples/.deps/test_fused_gtest_test-sample1_unittest.Tpo samples/.deps/test_fused_gtest_test-sample1_unittest.Po
+/bin/bash ./libtool --tag=CXX   --mode=link g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2   -o test/fused_gtest_test fused-src/gtest/test_fused_gtest_test-gtest-all.o fused-src/gtest/test_fused_gtest_test-gtest_main.o samples/test_fused_gtest_test-sample1.o samples/test_fused_gtest_test-sample1_unittest.o  
+libtool: link: g++ -pthread -DGTEST_HAS_PTHREAD=1 -g -O2 -o test/fused_gtest_test fused-src/gtest/test_fused_gtest_test-gtest-all.o fused-src/gtest/test_fused_gtest_test-gtest_main.o samples/test_fused_gtest_test-sample1.o samples/test_fused_gtest_test-sample1_unittest.o  -pthread
+Running main() from gtest_main.cc
+[==========] Running 6 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from FactorialTest
+[ RUN      ] FactorialTest.Negative
+[       OK ] FactorialTest.Negative (0 ms)
+[ RUN      ] FactorialTest.Zero
+[       OK ] FactorialTest.Zero (0 ms)
+[ RUN      ] FactorialTest.Positive
+[       OK ] FactorialTest.Positive (0 ms)
+[----------] 3 tests from FactorialTest (0 ms total)
+
+[----------] 3 tests from IsPrimeTest
+[ RUN      ] IsPrimeTest.Negative
+[       OK ] IsPrimeTest.Negative (0 ms)
+[ RUN      ] IsPrimeTest.Trivial
+[       OK ] IsPrimeTest.Trivial (0 ms)
+[ RUN      ] IsPrimeTest.Positive
+[       OK ] IsPrimeTest.Positive (0 ms)
+[----------] 3 tests from IsPrimeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 6 tests.
+PASS: samples/sample1_unittest
+Run this program with --check_for_leaks to enable custom leak checking in the tests.
+[==========] Running 2 tests from 1 test case.
+[----------] Global test environment set-up.
+[----------] 2 tests from ListenersTest
+[ RUN      ] ListenersTest.DoesNotLeak
+[       OK ] ListenersTest.DoesNotLeak (0 ms)
+[ RUN      ] ListenersTest.LeaksWater
+[       OK ] ListenersTest.LeaksWater (0 ms)
+[----------] 2 tests from ListenersTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 2 tests from 1 test case ran. (0 ms total)
+[  PASSED  ] 2 tests.
+PASS: samples/sample10_unittest
+Running main() from gtest_main.cc
+[==========] Running 748 tests from 168 test cases.
+[----------] Global test environment set-up.
+[----------] 2 tests from GtestCheckDeathTest
+[ RUN      ] GtestCheckDeathTest.DiesWithCorrectOutputOnFailure
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] GtestCheckDeathTest.DiesWithCorrectOutputOnFailure (1 ms)
+[ RUN      ] GtestCheckDeathTest.LivesSilentlyOnSuccess
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] GtestCheckDeathTest.LivesSilentlyOnSuccess (2 ms)
+[----------] 2 tests from GtestCheckDeathTest (3 ms total)
+
+[----------] 1 test from CaptureDeathTest
+[ RUN      ] CaptureDeathTest.CannotReenterStdoutCapture
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] CaptureDeathTest.CannotReenterStdoutCapture (0 ms)
+[----------] 1 test from CaptureDeathTest (0 ms total)
+
+[----------] 1 test from MutexDeathTest
+[ RUN      ] MutexDeathTest.AssertHeldShouldAssertWhenNotLocked
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] MutexDeathTest.AssertHeldShouldAssertWhenNotLocked (1 ms)
+[----------] 1 test from MutexDeathTest (1 ms total)
+
+[----------] 1 test from TestPartResultArrayDeathTest
+[ RUN      ] TestPartResultArrayDeathTest.DiesWhenIndexIsOutOfBound
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+Invalid index (-1) into TestPartResultArray.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+Invalid index (1) into TestPartResultArray.
+[       OK ] TestPartResultArrayDeathTest.DiesWhenIndexIsOutOfBound (1 ms)
+[----------] 1 test from TestPartResultArrayDeathTest (1 ms total)
+
+[----------] 4 tests from TypedTestCasePStateDeathTest
+[ RUN      ] TypedTestCasePStateDeathTest.DetectsDuplicates
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TypedTestCasePStateDeathTest.DetectsDuplicates (1 ms)
+[ RUN      ] TypedTestCasePStateDeathTest.DetectsExtraTest
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TypedTestCasePStateDeathTest.DetectsExtraTest (0 ms)
+[ RUN      ] TypedTestCasePStateDeathTest.DetectsMissedTest
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TypedTestCasePStateDeathTest.DetectsMissedTest (1 ms)
+[ RUN      ] TypedTestCasePStateDeathTest.DetectsTestAfterRegistration
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TypedTestCasePStateDeathTest.DetectsTestAfterRegistration (1 ms)
+[----------] 4 tests from TypedTestCasePStateDeathTest (3 ms total)
+
+[----------] 1 test from RandomDeathTest
+[ RUN      ] RandomDeathTest.GeneratesCrashesOnInvalidRange
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] RandomDeathTest.GeneratesCrashesOnInvalidRange (1 ms)
+[----------] 1 test from RandomDeathTest (1 ms total)
+
+[----------] 1 test from ContainerUtilityDeathTest
+[ RUN      ] ContainerUtilityDeathTest.ShuffleRange
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] ContainerUtilityDeathTest.ShuffleRange (4 ms)
+[----------] 1 test from ContainerUtilityDeathTest (4 ms total)
+
+[----------] 1 test from TestResultDeathTest
+[ RUN      ] TestResultDeathTest.GetTestPartResult
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TestResultDeathTest.GetTestPartResult (1 ms)
+[----------] 1 test from TestResultDeathTest (1 ms total)
+
+[----------] 1 test from TestResultPropertyDeathTest
+[ RUN      ] TestResultPropertyDeathTest.GetTestProperty
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] TestResultPropertyDeathTest.GetTestProperty (1 ms)
+[----------] 1 test from TestResultPropertyDeathTest (1 ms total)
+
+[----------] 2 tests from Int32FromEnvOrDieDeathTest
+[ RUN      ] Int32FromEnvOrDieDeathTest.AbortsOnFailure
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+WARNING: The value of environment variable GTEST_VAR is expected to be a 32-bit integer, but actually has value "xxx".
+[       OK ] Int32FromEnvOrDieDeathTest.AbortsOnFailure (1 ms)
+[ RUN      ] Int32FromEnvOrDieDeathTest.AbortsOnInt32Overflow
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+WARNING: The value of environment variable GTEST_VAR is expected to be a 32-bit integer, but actually has value 1234567891234567891234, which overflows.
+[       OK ] Int32FromEnvOrDieDeathTest.AbortsOnInt32Overflow (2 ms)
+[----------] 2 tests from Int32FromEnvOrDieDeathTest (3 ms total)
+
+[----------] 1 test from ShouldShardDeathTest
+[ RUN      ] ShouldShardDeathTest.AbortsWhenShardingEnvVarsAreInvalid
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+Invalid environment variables: we require 0 <= GTEST_SHARD_INDEX < GTEST_TOTAL_SHARDS, but you have GTEST_SHARD_INDEX=4, GTEST_TOTAL_SHARDS=4.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+Invalid environment variables: we require 0 <= GTEST_SHARD_INDEX < GTEST_TOTAL_SHARDS, but you have GTEST_SHARD_INDEX=4, GTEST_TOTAL_SHARDS=-2.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+Invalid environment variables: you have GTEST_SHARD_INDEX = 5, but have left GTEST_TOTAL_SHARDS unset.
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+Invalid environment variables: you have GTEST_TOTAL_SHARDS = 5, but have left GTEST_SHARD_INDEX unset.
+[       OK ] ShouldShardDeathTest.AbortsWhenShardingEnvVarsAreInvalid (9 ms)
+[----------] 1 test from ShouldShardDeathTest (9 ms total)
+
+[----------] 1 test from EventListenerDeathTest
+[ RUN      ] EventListenerDeathTest.EventsNotForwardedInDeathTestSubprecesses
+
+[WARNING] ./src/gtest-death-test.cc:789:: Death tests use fork(), which is unsafe particularly in a threaded context. For this test, Google Test couldn't detect the number of threads.
+[       OK ] EventListenerDeathTest.EventsNotForwardedInDeathTestSubprecesses (1 ms)
+[----------] 1 test from EventListenerDeathTest (1 ms total)
+
+[----------] 1 test from GetCurrentDirTest
+[ RUN      ] GetCurrentDirTest.ReturnsCurrentDir
+[       OK ] GetCurrentDirTest.ReturnsCurrentDir (0 ms)
+[----------] 1 test from GetCurrentDirTest (0 ms total)
+
+[----------] 2 tests from IsEmptyTest
+[ RUN      ] IsEmptyTest.ReturnsTrueForEmptyPath
+[       OK ] IsEmptyTest.ReturnsTrueForEmptyPath (0 ms)
+[ RUN      ] IsEmptyTest.ReturnsFalseForNonEmptyPath
+[       OK ] IsEmptyTest.ReturnsFalseForNonEmptyPath (0 ms)
+[----------] 2 tests from IsEmptyTest (0 ms total)
+
+[----------] 6 tests from RemoveDirectoryNameTest
+[ RUN      ] RemoveDirectoryNameTest.WhenEmptyName
+[       OK ] RemoveDirectoryNameTest.WhenEmptyName (0 ms)
+[ RUN      ] RemoveDirectoryNameTest.ButNoDirectory
+[       OK ] RemoveDirectoryNameTest.ButNoDirectory (0 ms)
+[ RUN      ] RemoveDirectoryNameTest.RootFileShouldGiveFileName
+[       OK ] RemoveDirectoryNameTest.RootFileShouldGiveFileName (0 ms)
+[ RUN      ] RemoveDirectoryNameTest.WhereThereIsNoFileName
+[       OK ] RemoveDirectoryNameTest.WhereThereIsNoFileName (0 ms)
+[ RUN      ] RemoveDirectoryNameTest.ShouldGiveFileName
+[       OK ] RemoveDirectoryNameTest.ShouldGiveFileName (0 ms)
+[ RUN      ] RemoveDirectoryNameTest.ShouldAlsoGiveFileName
+[       OK ] RemoveDirectoryNameTest.ShouldAlsoGiveFileName (0 ms)
+[----------] 6 tests from RemoveDirectoryNameTest (0 ms total)
+
+[----------] 5 tests from RemoveFileNameTest
+[ RUN      ] RemoveFileNameTest.EmptyName
+[       OK ] RemoveFileNameTest.EmptyName (0 ms)
+[ RUN      ] RemoveFileNameTest.ButNoFile
+[       OK ] RemoveFileNameTest.ButNoFile (0 ms)
+[ RUN      ] RemoveFileNameTest.GivesDirName
+[       OK ] RemoveFileNameTest.GivesDirName (0 ms)
+[ RUN      ] RemoveFileNameTest.GivesDirAndSubDirName
+[       OK ] RemoveFileNameTest.GivesDirAndSubDirName (0 ms)
+[ RUN      ] RemoveFileNameTest.GivesRootDir
+[       OK ] RemoveFileNameTest.GivesRootDir (0 ms)
+[----------] 5 tests from RemoveFileNameTest (0 ms total)
+
+[----------] 6 tests from MakeFileNameTest
+[ RUN      ] MakeFileNameTest.GenerateWhenNumberIsZero
+[       OK ] MakeFileNameTest.GenerateWhenNumberIsZero (0 ms)
+[ RUN      ] MakeFileNameTest.GenerateFileNameNumberGtZero
+[       OK ] MakeFileNameTest.GenerateFileNameNumberGtZero (0 ms)
+[ RUN      ] MakeFileNameTest.GenerateFileNameWithSlashNumberIsZero
+[       OK ] MakeFileNameTest.GenerateFileNameWithSlashNumberIsZero (0 ms)
+[ RUN      ] MakeFileNameTest.GenerateFileNameWithSlashNumberGtZero
+[       OK ] MakeFileNameTest.GenerateFileNameWithSlashNumberGtZero (0 ms)
+[ RUN      ] MakeFileNameTest.GenerateWhenNumberIsZeroAndDirIsEmpty
+[       OK ] MakeFileNameTest.GenerateWhenNumberIsZeroAndDirIsEmpty (0 ms)
+[ RUN      ] MakeFileNameTest.GenerateWhenNumberIsNotZeroAndDirIsEmpty
+[       OK ] MakeFileNameTest.GenerateWhenNumberIsNotZeroAndDirIsEmpty (0 ms)
+[----------] 6 tests from MakeFileNameTest (0 ms total)
+
+[----------] 8 tests from ConcatPathsTest
+[ RUN      ] ConcatPathsTest.WorksWhenDirDoesNotEndWithPathSep
+[       OK ] ConcatPathsTest.WorksWhenDirDoesNotEndWithPathSep (0 ms)
+[ RUN      ] ConcatPathsTest.WorksWhenPath1EndsWithPathSep
+[       OK ] ConcatPathsTest.WorksWhenPath1EndsWithPathSep (0 ms)
+[ RUN      ] ConcatPathsTest.Path1BeingEmpty
+[       OK ] ConcatPathsTest.Path1BeingEmpty (0 ms)
+[ RUN      ] ConcatPathsTest.Path2BeingEmpty
+[       OK ] ConcatPathsTest.Path2BeingEmpty (0 ms)
+[ RUN      ] ConcatPathsTest.BothPathBeingEmpty
+[       OK ] ConcatPathsTest.BothPathBeingEmpty (0 ms)
+[ RUN      ] ConcatPathsTest.Path1ContainsPathSep
+[       OK ] ConcatPathsTest.Path1ContainsPathSep (0 ms)
+[ RUN      ] ConcatPathsTest.Path2ContainsPathSep
+[       OK ] ConcatPathsTest.Path2ContainsPathSep (0 ms)
+[ RUN      ] ConcatPathsTest.Path2EndsWithPathSep
+[       OK ] ConcatPathsTest.Path2EndsWithPathSep (0 ms)
+[----------] 8 tests from ConcatPathsTest (0 ms total)
+
+[----------] 5 tests from RemoveTrailingPathSeparatorTest
+[ RUN      ] RemoveTrailingPathSeparatorTest.EmptyString
+[       OK ] RemoveTrailingPathSeparatorTest.EmptyString (0 ms)
+[ RUN      ] RemoveTrailingPathSeparatorTest.FileNoSlashString
+[       OK ] RemoveTrailingPathSeparatorTest.FileNoSlashString (0 ms)
+[ RUN      ] RemoveTrailingPathSeparatorTest.ShouldRemoveTrailingSeparator
+[       OK ] RemoveTrailingPathSeparatorTest.ShouldRemoveTrailingSeparator (0 ms)
+[ RUN      ] RemoveTrailingPathSeparatorTest.ShouldRemoveLastSeparator
+[       OK ] RemoveTrailingPathSeparatorTest.ShouldRemoveLastSeparator (0 ms)
+[ RUN      ] RemoveTrailingPathSeparatorTest.ShouldReturnUnmodified
+[       OK ] RemoveTrailingPathSeparatorTest.ShouldReturnUnmodified (0 ms)
+[----------] 5 tests from RemoveTrailingPathSeparatorTest (0 ms total)
+
+[----------] 3 tests from DirectoryTest
+[ RUN      ] DirectoryTest.RootDirectoryExists
+[       OK ] DirectoryTest.RootDirectoryExists (0 ms)
+[ RUN      ] DirectoryTest.EmptyPathDirectoryDoesNotExist
+[       OK ] DirectoryTest.EmptyPathDirectoryDoesNotExist (0 ms)
+[ RUN      ] DirectoryTest.CurrentDirectoryExists
+[       OK ] DirectoryTest.CurrentDirectoryExists (0 ms)
+[----------] 3 tests from DirectoryTest (0 ms total)
+
+[----------] 4 tests from NormalizeTest
+[ RUN      ] NormalizeTest.NullStringsEqualEmptyDirectory
+[       OK ] NormalizeTest.NullStringsEqualEmptyDirectory (0 ms)
+[ RUN      ] NormalizeTest.MultipleConsecutiveSepaparatorsInMidstring
+[       OK ] NormalizeTest.MultipleConsecutiveSepaparatorsInMidstring (0 ms)
+[ RUN      ] NormalizeTest.MultipleConsecutiveSepaparatorsAtStringStart
+[       OK ] NormalizeTest.MultipleConsecutiveSepaparatorsAtStringStart (0 ms)
+[ RUN      ] NormalizeTest.MultipleConsecutiveSepaparatorsAtStringEnd
+[       OK ] NormalizeTest.MultipleConsecutiveSepaparatorsAtStringEnd (0 ms)
+[----------] 4 tests from NormalizeTest (1 ms total)
+
+[----------] 3 tests from AssignmentOperatorTest
+[ RUN      ] AssignmentOperatorTest.DefaultAssignedToNonDefault
+[       OK ] AssignmentOperatorTest.DefaultAssignedToNonDefault (0 ms)
+[ RUN      ] AssignmentOperatorTest.NonDefaultAssignedToDefault
+[       OK ] AssignmentOperatorTest.NonDefaultAssignedToDefault (0 ms)
+[ RUN      ] AssignmentOperatorTest.ConstAssignedToNonConst
+[       OK ] AssignmentOperatorTest.ConstAssignedToNonConst (0 ms)
+[----------] 3 tests from AssignmentOperatorTest (0 ms total)
+
+[----------] 4 tests from DirectoryCreationTest
+[ RUN      ] DirectoryCreationTest.CreateDirectoriesRecursively
+[       OK ] DirectoryCreationTest.CreateDirectoriesRecursively (1 ms)
+[ RUN      ] DirectoryCreationTest.CreateDirectoriesForAlreadyExistingPath
+[       OK ] DirectoryCreationTest.CreateDirectoriesForAlreadyExistingPath (0 ms)
+[ RUN      ] DirectoryCreationTest.CreateDirectoriesAndUniqueFilename
+[       OK ] DirectoryCreationTest.CreateDirectoriesAndUniqueFilename (0 ms)
+[ RUN      ] DirectoryCreationTest.CreateDirectoriesFail
+[       OK ] DirectoryCreationTest.CreateDirectoriesFail (1 ms)
+[----------] 4 tests from DirectoryCreationTest (2 ms total)
+
+[----------] 1 test from NoDirectoryCreationTest
+[ RUN      ] NoDirectoryCreationTest.CreateNoDirectoriesForDefaultXmlFile
+[       OK ] NoDirectoryCreationTest.CreateNoDirectoriesForDefaultXmlFile (0 ms)
+[----------] 1 test from NoDirectoryCreationTest (0 ms total)
+
+[----------] 10 tests from FilePathTest
+[ RUN      ] FilePathTest.DefaultConstructor
+[       OK ] FilePathTest.DefaultConstructor (0 ms)
+[ RUN      ] FilePathTest.CharAndCopyConstructors
+[       OK ] FilePathTest.CharAndCopyConstructors (0 ms)
+[ RUN      ] FilePathTest.StringConstructor
+[       OK ] FilePathTest.StringConstructor (0 ms)
+[ RUN      ] FilePathTest.Set
+[       OK ] FilePathTest.Set (0 ms)
+[ RUN      ] FilePathTest.ToString
+[       OK ] FilePathTest.ToString (0 ms)
+[ RUN      ] FilePathTest.RemoveExtension
+[       OK ] FilePathTest.RemoveExtension (0 ms)
+[ RUN      ] FilePathTest.RemoveExtensionWhenThereIsNoExtension
+[       OK ] FilePathTest.RemoveExtensionWhenThereIsNoExtension (0 ms)
+[ RUN      ] FilePathTest.IsDirectory
+[       OK ] FilePathTest.IsDirectory (0 ms)
+[ RUN      ] FilePathTest.IsAbsolutePath
+[       OK ] FilePathTest.IsAbsolutePath (0 ms)
+[ RUN      ] FilePathTest.IsRootDirectory
+[       OK ] FilePathTest.IsRootDirectory (0 ms)
+[----------] 10 tests from FilePathTest (0 ms total)
+
+[----------] 1 test from LinkedPtrTest
+[ RUN      ] LinkedPtrTest.GeneralTest
+[       OK ] LinkedPtrTest.GeneralTest (0 ms)
+[----------] 1 test from LinkedPtrTest (0 ms total)
+
+[----------] 23 tests from MessageTest
+[ RUN      ] MessageTest.DefaultConstructor
+[       OK ] MessageTest.DefaultConstructor (0 ms)
+[ RUN      ] MessageTest.CopyConstructor
+[       OK ] MessageTest.CopyConstructor (0 ms)
+[ RUN      ] MessageTest.ConstructsFromCString
+[       OK ] MessageTest.ConstructsFromCString (0 ms)
+[ RUN      ] MessageTest.StreamsFloat
+[       OK ] MessageTest.StreamsFloat (0 ms)
+[ RUN      ] MessageTest.StreamsDouble
+[       OK ] MessageTest.StreamsDouble (0 ms)
+[ RUN      ] MessageTest.StreamsPointer
+[       OK ] MessageTest.StreamsPointer (0 ms)
+[ RUN      ] MessageTest.StreamsNullPointer
+[       OK ] MessageTest.StreamsNullPointer (0 ms)
+[ RUN      ] MessageTest.StreamsCString
+[       OK ] MessageTest.StreamsCString (0 ms)
+[ RUN      ] MessageTest.StreamsNullCString
+[       OK ] MessageTest.StreamsNullCString (0 ms)
+[ RUN      ] MessageTest.StreamsString
+[       OK ] MessageTest.StreamsString (0 ms)
+[ RUN      ] MessageTest.StreamsStringWithEmbeddedNUL
+[       OK ] MessageTest.StreamsStringWithEmbeddedNUL (0 ms)
+[ RUN      ] MessageTest.StreamsNULChar
+[       OK ] MessageTest.StreamsNULChar (0 ms)
+[ RUN      ] MessageTest.StreamsInt
+[       OK ] MessageTest.StreamsInt (0 ms)
+[ RUN      ] MessageTest.StreamsBasicIoManip
+[       OK ] MessageTest.StreamsBasicIoManip (0 ms)
+[ RUN      ] MessageTest.GetString
+[       OK ] MessageTest.GetString (0 ms)
+[ RUN      ] MessageTest.StreamsToOStream
+[       OK ] MessageTest.StreamsToOStream (0 ms)
+[ RUN      ] MessageTest.DoesNotTakeUpMuchStackSpace
+[       OK ] MessageTest.DoesNotTakeUpMuchStackSpace (0 ms)
+[ RUN      ] MessageTest.CanStreamUserTypeInGlobalNameSpace
+[       OK ] MessageTest.CanStreamUserTypeInGlobalNameSpace (0 ms)
+[ RUN      ] MessageTest.CanStreamUserTypeInUnnamedNameSpace
+[       OK ] MessageTest.CanStreamUserTypeInUnnamedNameSpace (0 ms)
+[ RUN      ] MessageTest.CanStreamUserTypeInUserNameSpace
+[       OK ] MessageTest.CanStreamUserTypeInUserNameSpace (0 ms)
+[ RUN      ] MessageTest.CanStreamUserTypeInUserNameSpaceWithStreamOperatorInGlobal
+[       OK ] MessageTest.CanStreamUserTypeInUserNameSpaceWithStreamOperatorInGlobal (0 ms)
+[ RUN      ] MessageTest.NullPointers
+[       OK ] MessageTest.NullPointers (0 ms)
+[ RUN      ] MessageTest.WideStrings
+[       OK ] MessageTest.WideStrings (0 ms)
+[----------] 23 tests from MessageTest (1 ms total)
+
+[----------] 5 tests from XmlOutputTest
+[ RUN      ] XmlOutputTest.GetOutputFormatDefault
+[       OK ] XmlOutputTest.GetOutputFormatDefault (0 ms)
+[ RUN      ] XmlOutputTest.GetOutputFormat
+[       OK ] XmlOutputTest.GetOutputFormat (0 ms)
+[ RUN      ] XmlOutputTest.GetOutputFileDefault
+[       OK ] XmlOutputTest.GetOutputFileDefault (0 ms)
+[ RUN      ] XmlOutputTest.GetOutputFileSingleFile
+[       OK ] XmlOutputTest.GetOutputFileSingleFile (0 ms)
+[ RUN      ] XmlOutputTest.GetOutputFileFromDirectoryPath
+[       OK ] XmlOutputTest.GetOutputFileFromDirectoryPath (1 ms)
+[----------] 5 tests from XmlOutputTest (1 ms total)
+
+[----------] 1 test from OutputFileHelpersTest
+[ RUN      ] OutputFileHelpersTest.GetCurrentExecutableName
+[       OK ] OutputFileHelpersTest.GetCurrentExecutableName (0 ms)
+[----------] 1 test from OutputFileHelpersTest (0 ms total)
+
+[----------] 6 tests from XmlOutputChangeDirTest
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithDefault
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithDefault (0 ms)
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithDefaultXML
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithDefaultXML (0 ms)
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithRelativeFile
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithRelativeFile (0 ms)
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithRelativePath
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithRelativePath (0 ms)
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithAbsoluteFile
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithAbsoluteFile (0 ms)
+[ RUN      ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithAbsolutePath
+[       OK ] XmlOutputChangeDirTest.PreserveOriginalWorkingDirWithAbsolutePath (0 ms)
+[----------] 6 tests from XmlOutputChangeDirTest (0 ms total)
+
+[----------] 6 tests from ImplicitCastTest
+[ RUN      ] ImplicitCastTest.ConvertsPointers
+[       OK ] ImplicitCastTest.ConvertsPointers (0 ms)
+[ RUN      ] ImplicitCastTest.CanUseInheritance
+[       OK ] ImplicitCastTest.CanUseInheritance (0 ms)
+[ RUN      ] ImplicitCastTest.CanUseNonConstCastOperator
+[       OK ] ImplicitCastTest.CanUseNonConstCastOperator (0 ms)
+[ RUN      ] ImplicitCastTest.CanUseConstCastOperatorOnConstValues
+[       OK ] ImplicitCastTest.CanUseConstCastOperatorOnConstValues (0 ms)
+[ RUN      ] ImplicitCastTest.CanSelectBetweenConstAndNonConstCasrAppropriately
+[       OK ] ImplicitCastTest.CanSelectBetweenConstAndNonConstCasrAppropriately (0 ms)
+[ RUN      ] ImplicitCastTest.CanUseImplicitConstructor
+[       OK ] ImplicitCastTest.CanUseImplicitConstructor (0 ms)
+[----------] 6 tests from ImplicitCastTest (0 ms total)
+
+[----------] 3 tests from IteratorTraitsTest
+[ RUN      ] IteratorTraitsTest.WorksForSTLContainerIterators
+[       OK ] IteratorTraitsTest.WorksForSTLContainerIterators (0 ms)
+[ RUN      ] IteratorTraitsTest.WorksForPointerToNonConst
+[       OK ] IteratorTraitsTest.WorksForPointerToNonConst (0 ms)
+[ RUN      ] IteratorTraitsTest.WorksForPointerToConst
+[       OK ] IteratorTraitsTest.WorksForPointerToConst (0 ms)
+[----------] 3 tests from IteratorTraitsTest (0 ms total)
+
+[----------] 1 test from ScopedPtrTest
+[ RUN      ] ScopedPtrTest.DefinesElementType
+[       OK ] ScopedPtrTest.DefinesElementType (0 ms)
+[----------] 1 test from ScopedPtrTest (0 ms total)
+
+[----------] 2 tests from GtestCheckSyntaxTest
+[ RUN      ] GtestCheckSyntaxTest.BehavesLikeASingleStatement
+[       OK ] GtestCheckSyntaxTest.BehavesLikeASingleStatement (0 ms)
+[ RUN      ] GtestCheckSyntaxTest.WorksWithSwitch
+[       OK ] GtestCheckSyntaxTest.WorksWithSwitch (0 ms)
+[----------] 2 tests from GtestCheckSyntaxTest (0 ms total)
+
+[----------] 4 tests from FormatFileLocationTest
+[ RUN      ] FormatFileLocationTest.FormatsFileLocation
+[       OK ] FormatFileLocationTest.FormatsFileLocation (0 ms)
+[ RUN      ] FormatFileLocationTest.FormatsUnknownFile
+[       OK ] FormatFileLocationTest.FormatsUnknownFile (0 ms)
+[ RUN      ] FormatFileLocationTest.FormatsUknownLine
+[       OK ] FormatFileLocationTest.FormatsUknownLine (0 ms)
+[ RUN      ] FormatFileLocationTest.FormatsUknownFileAndLine
+[       OK ] FormatFileLocationTest.FormatsUknownFileAndLine (0 ms)
+[----------] 4 tests from FormatFileLocationTest (1 ms total)
+
+[----------] 4 tests from FormatCompilerIndependentFileLocationTest
+[ RUN      ] FormatCompilerIndependentFileLocationTest.FormatsFileLocation
+[       OK ] FormatCompilerIndependentFileLocationTest.FormatsFileLocation (0 ms)
+[ RUN      ] FormatCompilerIndependentFileLocationTest.FormatsUknownFile
+[       OK ] FormatCompilerIndependentFileLocationTest.FormatsUknownFile (0 ms)
+[ RUN      ] FormatCompilerIndependentFileLocationTest.FormatsUknownLine
+[       OK ] FormatCompilerIndependentFileLocationTest.FormatsUknownLine (0 ms)
+[ RUN      ] FormatCompilerIndependentFileLocationTest.FormatsUknownFileAndLine
+[       OK ] FormatCompilerIndependentFileLocationTest.FormatsUknownFileAndLine (0 ms)
+[----------] 4 tests from FormatCompilerIndependentFileLocationTest (0 ms total)
+
+[----------] 1 test from GetThreadCountTest
+[ RUN      ] GetThreadCountTest.ReturnsZeroWhenUnableToCountThreads
+[       OK ] GetThreadCountTest.ReturnsZeroWhenUnableToCountThreads (0 ms)
+[----------] 1 test from GetThreadCountTest (0 ms total)
+
+[----------] 1 test from RegexEngineSelectionTest
+[ RUN      ] RegexEngineSelectionTest.SelectsCorrectRegexEngine
+[       OK ] RegexEngineSelectionTest.SelectsCorrectRegexEngine (0 ms)
+[----------] 1 test from RegexEngineSelectionTest (0 ms total)
+
+[----------] 4 tests from RETest/0, where TypeParam = std::string
+[ RUN      ] RETest/0.ImplicitConstructorWorks
+[       OK ] RETest/0.ImplicitConstructorWorks (0 ms)
+[ RUN      ] RETest/0.RejectsInvalidRegex
+[       OK ] RETest/0.RejectsInvalidRegex (0 ms)
+[ RUN      ] RETest/0.FullMatchWorks
+[       OK ] RETest/0.FullMatchWorks (0 ms)
+[ RUN      ] RETest/0.PartialMatchWorks
+[       OK ] RETest/0.PartialMatchWorks (0 ms)
+[----------] 4 tests from RETest/0 (15 ms total)
+
+[----------] 4 tests from RETest/1, where TypeParam = char const*
+[ RUN      ] RETest/1.ImplicitConstructorWorks
+[       OK ] RETest/1.ImplicitConstructorWorks (0 ms)
+[ RUN      ] RETest/1.RejectsInvalidRegex
+[       OK ] RETest/1.RejectsInvalidRegex (0 ms)
+[ RUN      ] RETest/1.FullMatchWorks
+[       OK ] RETest/1.FullMatchWorks (0 ms)
+[ RUN      ] RETest/1.PartialMatchWorks
+[       OK ] RETest/1.PartialMatchWorks (0 ms)
+[----------] 4 tests from RETest/1 (0 ms total)
+
+[----------] 3 tests from CaptureTest
+[ RUN      ] CaptureTest.CapturesStdout
+[       OK ] CaptureTest.CapturesStdout (0 ms)
+[ RUN      ] CaptureTest.CapturesStderr
+[       OK ] CaptureTest.CapturesStderr (0 ms)
+[ RUN      ] CaptureTest.CapturesStdoutAndStderr
+[       OK ] CaptureTest.CapturesStdoutAndStderr (0 ms)
+[----------] 3 tests from CaptureTest (1 ms total)
+
+[----------] 9 tests from ThreadLocalTest
+[ RUN      ] ThreadLocalTest.DefaultConstructorInitializesToDefaultValues
+[       OK ] ThreadLocalTest.DefaultConstructorInitializesToDefaultValues (0 ms)
+[ RUN      ] ThreadLocalTest.SingleParamConstructorInitializesToParam
+[       OK ] ThreadLocalTest.SingleParamConstructorInitializesToParam (0 ms)
+[ RUN      ] ThreadLocalTest.ValueDefaultContructorIsNotRequiredForParamVersion
+[       OK ] ThreadLocalTest.ValueDefaultContructorIsNotRequiredForParamVersion (0 ms)
+[ RUN      ] ThreadLocalTest.GetAndPointerReturnSameValue
+[       OK ] ThreadLocalTest.GetAndPointerReturnSameValue (0 ms)
+[ RUN      ] ThreadLocalTest.PointerAndConstPointerReturnSameValue
+[       OK ] ThreadLocalTest.PointerAndConstPointerReturnSameValue (0 ms)
+[ RUN      ] ThreadLocalTest.ParameterizedConstructorSetsDefault
+[       OK ] ThreadLocalTest.ParameterizedConstructorSetsDefault (0 ms)
+[ RUN      ] ThreadLocalTest.DestroysManagedObjectForOwnThreadWhenDying
+[       OK ] ThreadLocalTest.DestroysManagedObjectForOwnThreadWhenDying (0 ms)
+[ RUN      ] ThreadLocalTest.DestroysManagedObjectAtThreadExit
+[       OK ] ThreadLocalTest.DestroysManagedObjectAtThreadExit (0 ms)
+[ RUN      ] ThreadLocalTest.ThreadLocalMutationsAffectOnlyCurrentThread
+[       OK ] ThreadLocalTest.ThreadLocalMutationsAffectOnlyCurrentThread (0 ms)
+[----------] 9 tests from ThreadLocalTest (0 ms total)
+
+[----------] 1 test from ThreadWithParamTest
+[ RUN      ] ThreadWithParamTest.ConstructorExecutesThreadFunc
+[       OK ] ThreadWithParamTest.ConstructorExecutesThreadFunc (0 ms)
+[----------] 1 test from ThreadWithParamTest (0 ms total)
+
+[----------] 2 tests from MutexTest
+[ RUN      ] MutexTest.AssertHeldShouldNotAssertWhenLocked
+[       OK ] MutexTest.AssertHeldShouldNotAssertWhenLocked (0 ms)
+[ RUN      ] MutexTest.OnlyOneThreadCanLockAtATime
+[       OK ] MutexTest.OnlyOneThreadCanLockAtATime (2023 ms)
+[----------] 2 tests from MutexTest (2023 ms total)
+
+[----------] 8 tests from EXPECT_PRED1Test
+[ RUN      ] EXPECT_PRED1Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED1Test.FunctionOnBuiltInTypeSuccess (1 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED1Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED1Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED1Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED1Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED1Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED1Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED1Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED1Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED1Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED1Test
+[ RUN      ] ASSERT_PRED1Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED1Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED1Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED1Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED1Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED1Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED1Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED1Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED1Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED1Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED1Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED_FORMAT1Test
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT1Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT1Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED_FORMAT1Test (0 ms total)
+
+[----------] 8 tests from ASSERT_PRED_FORMAT1Test
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctorOnBuiltInTypeFailure (1 ms)
+[ RUN      ] ASSERT_PRED_FORMAT1Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT1Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED_FORMAT1Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED2Test
+[ RUN      ] EXPECT_PRED2Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED2Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED2Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED2Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED2Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED2Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED2Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED2Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED2Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED2Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED2Test (0 ms total)
+
+[----------] 8 tests from ASSERT_PRED2Test
+[ RUN      ] ASSERT_PRED2Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED2Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED2Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED2Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED2Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED2Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED2Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED2Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED2Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED2Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED2Test (0 ms total)
+
+[----------] 8 tests from EXPECT_PRED_FORMAT2Test
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctionOnBuiltInTypeFailure (1 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT2Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT2Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED_FORMAT2Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED_FORMAT2Test
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT2Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT2Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED_FORMAT2Test (0 ms total)
+
+[----------] 8 tests from EXPECT_PRED3Test
+[ RUN      ] EXPECT_PRED3Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED3Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED3Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED3Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED3Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED3Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED3Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED3Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED3Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED3Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED3Test (0 ms total)
+
+[----------] 8 tests from ASSERT_PRED3Test
+[ RUN      ] ASSERT_PRED3Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED3Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED3Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED3Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED3Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED3Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED3Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED3Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED3Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED3Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED3Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED_FORMAT3Test
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT3Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT3Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED_FORMAT3Test (6 ms total)
+
+[----------] 8 tests from ASSERT_PRED_FORMAT3Test
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT3Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT3Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED_FORMAT3Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED4Test
+[ RUN      ] EXPECT_PRED4Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED4Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED4Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED4Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED4Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED4Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED4Test.FunctionOnUserTypeFailure (1 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED4Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED4Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED4Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED4Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED4Test
+[ RUN      ] ASSERT_PRED4Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED4Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED4Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED4Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED4Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED4Test.FunctionOnBuiltInTypeFailure (1 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED4Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED4Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED4Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED4Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED4Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED_FORMAT4Test
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctionOnUserTypeFailure (1 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT4Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT4Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED_FORMAT4Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED_FORMAT4Test
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctionOnUserTypeFailure (1 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT4Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT4Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED_FORMAT4Test (8 ms total)
+
+[----------] 8 tests from EXPECT_PRED5Test
+[ RUN      ] EXPECT_PRED5Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED5Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED5Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED5Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED5Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED5Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED5Test.FunctionOnUserTypeFailure (1 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED5Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED5Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED5Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED5Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED5Test
+[ RUN      ] ASSERT_PRED5Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED5Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED5Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED5Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED5Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED5Test.FunctionOnBuiltInTypeFailure (1 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED5Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED5Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED5Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED5Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED5Test (1 ms total)
+
+[----------] 8 tests from EXPECT_PRED_FORMAT5Test
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctionOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctionOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctorOnBuiltInTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctorOnUserTypeSuccess
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctionOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctionOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctorOnBuiltInTypeFailure
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctorOnBuiltInTypeFailure (0 ms)
+[ RUN      ] EXPECT_PRED_FORMAT5Test.FunctorOnUserTypeFailure
+[       OK ] EXPECT_PRED_FORMAT5Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from EXPECT_PRED_FORMAT5Test (1 ms total)
+
+[----------] 8 tests from ASSERT_PRED_FORMAT5Test
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctionOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctionOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctionOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctionOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctorOnBuiltInTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctorOnBuiltInTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctorOnUserTypeSuccess
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctorOnUserTypeSuccess (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctionOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctionOnBuiltInTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctionOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctionOnUserTypeFailure (0 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctorOnBuiltInTypeFailure
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctorOnBuiltInTypeFailure (1 ms)
+[ RUN      ] ASSERT_PRED_FORMAT5Test.FunctorOnUserTypeFailure
+[       OK ] ASSERT_PRED_FORMAT5Test.FunctorOnUserTypeFailure (0 ms)
+[----------] 8 tests from ASSERT_PRED_FORMAT5Test (1 ms total)
+
+[----------] 1 test from PrivateCodeTest
+[ RUN      ] PrivateCodeTest.CanAccessPrivateMembers
+[       OK ] PrivateCodeTest.CanAccessPrivateMembers (0 ms)
+[----------] 1 test from PrivateCodeTest (0 ms total)
+
+[----------] 1 test from PrivateCodeFixtureTest
+[ RUN      ] PrivateCodeFixtureTest.CanAccessPrivateMembers
+[       OK ] PrivateCodeFixtureTest.CanAccessPrivateMembers (0 ms)
+[----------] 1 test from PrivateCodeFixtureTest (0 ms total)
+
+[----------] 10 tests from TestPartResultTest
+[ RUN      ] TestPartResultTest.ConstructorWorks
+[       OK ] TestPartResultTest.ConstructorWorks (0 ms)
+[ RUN      ] TestPartResultTest.ResultAccessorsWork
+[       OK ] TestPartResultTest.ResultAccessorsWork (0 ms)
+[ RUN      ] TestPartResultTest.type
+[       OK ] TestPartResultTest.type (0 ms)
+[ RUN      ] TestPartResultTest.file_name
+[       OK ] TestPartResultTest.file_name (0 ms)
+[ RUN      ] TestPartResultTest.line_number
+[       OK ] TestPartResultTest.line_number (0 ms)
+[ RUN      ] TestPartResultTest.message
+[       OK ] TestPartResultTest.message (0 ms)
+[ RUN      ] TestPartResultTest.Passed
+[       OK ] TestPartResultTest.Passed (0 ms)
+[ RUN      ] TestPartResultTest.Failed
+[       OK ] TestPartResultTest.Failed (0 ms)
+[ RUN      ] TestPartResultTest.FatallyFailed
+[       OK ] TestPartResultTest.FatallyFailed (0 ms)
+[ RUN      ] TestPartResultTest.NonfatallyFailed
+[       OK ] TestPartResultTest.NonfatallyFailed (0 ms)
+[----------] 10 tests from TestPartResultTest (0 ms total)
+
+[----------] 3 tests from TestPartResultArrayTest
+[ RUN      ] TestPartResultArrayTest.InitialSizeIsZero
+[       OK ] TestPartResultArrayTest.InitialSizeIsZero (0 ms)
+[ RUN      ] TestPartResultArrayTest.ContainsGivenResultAfterAppend
+[       OK ] TestPartResultArrayTest.ContainsGivenResultAfterAppend (0 ms)
+[ RUN      ] TestPartResultArrayTest.ContainsGivenResultsAfterTwoAppends
+[       OK ] TestPartResultArrayTest.ContainsGivenResultsAfterTwoAppends (0 ms)
+[----------] 3 tests from TestPartResultArrayTest (0 ms total)
+
+[----------] 2 tests from CommonTest/0, where TypeParam = char
+[ RUN      ] CommonTest/0.ValuesAreCorrect
+[       OK ] CommonTest/0.ValuesAreCorrect (0 ms)
+[ RUN      ] CommonTest/0.ValuesAreStillCorrect
+[       OK ] CommonTest/0.ValuesAreStillCorrect (0 ms)
+[----------] 2 tests from CommonTest/0 (0 ms total)
+
+[----------] 2 tests from CommonTest/1, where TypeParam = int
+[ RUN      ] CommonTest/1.ValuesAreCorrect
+[       OK ] CommonTest/1.ValuesAreCorrect (0 ms)
+[ RUN      ] CommonTest/1.ValuesAreStillCorrect
+[       OK ] CommonTest/1.ValuesAreStillCorrect (0 ms)
+[----------] 2 tests from CommonTest/1 (1 ms total)
+
+[----------] 1 test from TypedTest1/0, where TypeParam = int
+[ RUN      ] TypedTest1/0.A
+[       OK ] TypedTest1/0.A (0 ms)
+[----------] 1 test from TypedTest1/0 (0 ms total)
+
+[----------] 1 test from TypedTest2/0, where TypeParam = int
+[ RUN      ] TypedTest2/0.A
+[       OK ] TypedTest2/0.A (0 ms)
+[----------] 1 test from TypedTest2/0 (0 ms total)
+
+[----------] 1 test from NumericTest/0, where TypeParam = int
+[ RUN      ] NumericTest/0.DefaultIsZero
+[       OK ] NumericTest/0.DefaultIsZero (0 ms)
+[----------] 1 test from NumericTest/0 (0 ms total)
+
+[----------] 1 test from NumericTest/1, where TypeParam = long
+[ RUN      ] NumericTest/1.DefaultIsZero
+[       OK ] NumericTest/1.DefaultIsZero (0 ms)
+[----------] 1 test from NumericTest/1 (0 ms total)
+
+[----------] 2 tests from TypedTestCasePStateTest
+[ RUN      ] TypedTestCasePStateTest.SucceedsForMatchingList
+[       OK ] TypedTestCasePStateTest.SucceedsForMatchingList (0 ms)
+[ RUN      ] TypedTestCasePStateTest.IgnoresOrderAndSpaces
+[       OK ] TypedTestCasePStateTest.IgnoresOrderAndSpaces (0 ms)
+[----------] 2 tests from TypedTestCasePStateTest (0 ms total)
+
+[----------] 2 tests from My/DerivedTest/0, where TypeParam = short
+[ RUN      ] My/DerivedTest/0.ValuesAreCorrect
+[       OK ] My/DerivedTest/0.ValuesAreCorrect (0 ms)
+[ RUN      ] My/DerivedTest/0.ValuesAreStillCorrect
+[       OK ] My/DerivedTest/0.ValuesAreStillCorrect (0 ms)
+[----------] 2 tests from My/DerivedTest/0 (0 ms total)
+
+[----------] 2 tests from My/DerivedTest/1, where TypeParam = long
+[ RUN      ] My/DerivedTest/1.ValuesAreCorrect
+[       OK ] My/DerivedTest/1.ValuesAreCorrect (0 ms)
+[ RUN      ] My/DerivedTest/1.ValuesAreStillCorrect
+[       OK ] My/DerivedTest/1.ValuesAreStillCorrect (0 ms)
+[----------] 2 tests from My/DerivedTest/1 (0 ms total)
+
+[----------] 2 tests from Int/TypedTestP1/0, where TypeParam = int
+[ RUN      ] Int/TypedTestP1/0.A
+[       OK ] Int/TypedTestP1/0.A (0 ms)
+[ RUN      ] Int/TypedTestP1/0.B
+[       OK ] Int/TypedTestP1/0.B (0 ms)
+[----------] 2 tests from Int/TypedTestP1/0 (0 ms total)
+
+[----------] 1 test from Int/TypedTestP2/0, where TypeParam = int
+[ RUN      ] Int/TypedTestP2/0.A
+[       OK ] Int/TypedTestP2/0.A (0 ms)
+[----------] 1 test from Int/TypedTestP2/0 (0 ms total)
+
+[----------] 1 test from Double/TypedTestP2/0, where TypeParam = double
+[ RUN      ] Double/TypedTestP2/0.A
+[       OK ] Double/TypedTestP2/0.A (0 ms)
+[----------] 1 test from Double/TypedTestP2/0 (0 ms total)
+
+[----------] 2 tests from My/ContainerTest/0, where TypeParam = std::vector<double, std::allocator<double> >
+[ RUN      ] My/ContainerTest/0.CanBeDefaultConstructed
+[       OK ] My/ContainerTest/0.CanBeDefaultConstructed (0 ms)
+[ RUN      ] My/ContainerTest/0.InitialSizeIsZero
+[       OK ] My/ContainerTest/0.InitialSizeIsZero (0 ms)
+[----------] 2 tests from My/ContainerTest/0 (0 ms total)
+
+[----------] 2 tests from My/ContainerTest/1, where TypeParam = std::set<char, std::less<char>, std::allocator<char> >
+[ RUN      ] My/ContainerTest/1.CanBeDefaultConstructed
+[       OK ] My/ContainerTest/1.CanBeDefaultConstructed (0 ms)
+[ RUN      ] My/ContainerTest/1.InitialSizeIsZero
+[       OK ] My/ContainerTest/1.InitialSizeIsZero (0 ms)
+[----------] 2 tests from My/ContainerTest/1 (0 ms total)
+
+[----------] 2 tests from My/NumericTest/0, where TypeParam = int
+[ RUN      ] My/NumericTest/0.DefaultIsZero
+[       OK ] My/NumericTest/0.DefaultIsZero (0 ms)
+[ RUN      ] My/NumericTest/0.ZeroIsLessThanOne
+[       OK ] My/NumericTest/0.ZeroIsLessThanOne (0 ms)
+[----------] 2 tests from My/NumericTest/0 (0 ms total)
+
+[----------] 2 tests from My/NumericTest/1, where TypeParam = double
+[ RUN      ] My/NumericTest/1.DefaultIsZero
+[       OK ] My/NumericTest/1.DefaultIsZero (0 ms)
+[ RUN      ] My/NumericTest/1.ZeroIsLessThanOne
+[       OK ] My/NumericTest/1.ZeroIsLessThanOne (0 ms)
+[----------] 2 tests from My/NumericTest/1 (0 ms total)
+
+[----------] 2 tests from Vector/ContainerTest/0, where TypeParam = std::vector<int, std::allocator<int> >
+[ RUN      ] Vector/ContainerTest/0.CanBeDefaultConstructed
+[       OK ] Vector/ContainerTest/0.CanBeDefaultConstructed (0 ms)
+[ RUN      ] Vector/ContainerTest/0.InitialSizeIsZero
+[       OK ] Vector/ContainerTest/0.InitialSizeIsZero (0 ms)
+[----------] 2 tests from Vector/ContainerTest/0 (0 ms total)
+
+[----------] 1 test from CommandLineFlagsTest
+[ RUN      ] CommandLineFlagsTest.CanBeAccessedInCodeOnceGTestHIsIncluded
+[       OK ] CommandLineFlagsTest.CanBeAccessedInCodeOnceGTestHIsIncluded (0 ms)
+[----------] 1 test from CommandLineFlagsTest (0 ms total)
+
+[----------] 3 tests from GetRandomSeedFromFlagTest
+[ RUN      ] GetRandomSeedFromFlagTest.HandlesZero
+[       OK ] GetRandomSeedFromFlagTest.HandlesZero (0 ms)
+[ RUN      ] GetRandomSeedFromFlagTest.PreservesValidSeed
+[       OK ] GetRandomSeedFromFlagTest.PreservesValidSeed (0 ms)
+[ RUN      ] GetRandomSeedFromFlagTest.NormalizesInvalidSeed
+[       OK ] GetRandomSeedFromFlagTest.NormalizesInvalidSeed (0 ms)
+[----------] 3 tests from GetRandomSeedFromFlagTest (0 ms total)
+
+[----------] 1 test from GetNextRandomSeedTest
+[ RUN      ] GetNextRandomSeedTest.WorksForValidInput
+[       OK ] GetNextRandomSeedTest.WorksForValidInput (0 ms)
+[----------] 1 test from GetNextRandomSeedTest (0 ms total)
+
+[----------] 2 tests from GetTypeIdTest
+[ RUN      ] GetTypeIdTest.ReturnsSameValueForSameType
+[       OK ] GetTypeIdTest.ReturnsSameValueForSameType (0 ms)
+[ RUN      ] GetTypeIdTest.ReturnsDifferentValuesForDifferentTypes
+[       OK ] GetTypeIdTest.ReturnsDifferentValuesForDifferentTypes (0 ms)
+[----------] 2 tests from GetTypeIdTest (0 ms total)
+
+[----------] 1 test from GetTestTypeIdTest
+[ RUN      ] GetTestTypeIdTest.ReturnsTheSameValueInsideOrOutsideOfGoogleTest
+[       OK ] GetTestTypeIdTest.ReturnsTheSameValueInsideOrOutsideOfGoogleTest (0 ms)
+[----------] 1 test from GetTestTypeIdTest (0 ms total)
+
+[----------] 3 tests from FormatTimeInMillisAsSecondsTest
+[ RUN      ] FormatTimeInMillisAsSecondsTest.FormatsZero
+[       OK ] FormatTimeInMillisAsSecondsTest.FormatsZero (0 ms)
+[ RUN      ] FormatTimeInMillisAsSecondsTest.FormatsPositiveNumber
+[       OK ] FormatTimeInMillisAsSecondsTest.FormatsPositiveNumber (0 ms)
+[ RUN      ] FormatTimeInMillisAsSecondsTest.FormatsNegativeNumber
+[       OK ] FormatTimeInMillisAsSecondsTest.FormatsNegativeNumber (0 ms)
+[----------] 3 tests from FormatTimeInMillisAsSecondsTest (0 ms total)
+
+[----------] 2 tests from NullLiteralTest
+[ RUN      ] NullLiteralTest.IsTrueForNullLiterals
+[       OK ] NullLiteralTest.IsTrueForNullLiterals (0 ms)
+[ RUN      ] NullLiteralTest.IsFalseForNonNullLiterals
+[       OK ] NullLiteralTest.IsFalseForNonNullLiterals (0 ms)
+[----------] 2 tests from NullLiteralTest (0 ms total)
+
+[----------] 6 tests from CodePointToUtf8Test
+[ RUN      ] CodePointToUtf8Test.CanEncodeNul
+[       OK ] CodePointToUtf8Test.CanEncodeNul (0 ms)
+[ RUN      ] CodePointToUtf8Test.CanEncodeAscii
+[       OK ] CodePointToUtf8Test.CanEncodeAscii (0 ms)
+[ RUN      ] CodePointToUtf8Test.CanEncode8To11Bits
+[       OK ] CodePointToUtf8Test.CanEncode8To11Bits (0 ms)
+[ RUN      ] CodePointToUtf8Test.CanEncode12To16Bits
+[       OK ] CodePointToUtf8Test.CanEncode12To16Bits (0 ms)
+[ RUN      ] CodePointToUtf8Test.CanEncode17To21Bits
+[       OK ] CodePointToUtf8Test.CanEncode17To21Bits (0 ms)
+[ RUN      ] CodePointToUtf8Test.CanEncodeInvalidCodePoint
+[       OK ] CodePointToUtf8Test.CanEncodeInvalidCodePoint (0 ms)
+[----------] 6 tests from CodePointToUtf8Test (1 ms total)
+
+[----------] 9 tests from WideStringToUtf8Test
+[ RUN      ] WideStringToUtf8Test.CanEncodeNul
+[       OK ] WideStringToUtf8Test.CanEncodeNul (0 ms)
+[ RUN      ] WideStringToUtf8Test.CanEncodeAscii
+[       OK ] WideStringToUtf8Test.CanEncodeAscii (0 ms)
+[ RUN      ] WideStringToUtf8Test.CanEncode8To11Bits
+[       OK ] WideStringToUtf8Test.CanEncode8To11Bits (0 ms)
+[ RUN      ] WideStringToUtf8Test.CanEncode12To16Bits
+[       OK ] WideStringToUtf8Test.CanEncode12To16Bits (0 ms)
+[ RUN      ] WideStringToUtf8Test.StopsOnNulCharacter
+[       OK ] WideStringToUtf8Test.StopsOnNulCharacter (0 ms)
+[ RUN      ] WideStringToUtf8Test.StopsWhenLengthLimitReached
+[       OK ] WideStringToUtf8Test.StopsWhenLengthLimitReached (0 ms)
+[ RUN      ] WideStringToUtf8Test.CanEncode17To21Bits
+[       OK ] WideStringToUtf8Test.CanEncode17To21Bits (0 ms)
+[ RUN      ] WideStringToUtf8Test.CanEncodeInvalidCodePoint
+[       OK ] WideStringToUtf8Test.CanEncodeInvalidCodePoint (0 ms)
+[ RUN      ] WideStringToUtf8Test.ConcatenatesCodepointsCorrectly
+[       OK ] WideStringToUtf8Test.ConcatenatesCodepointsCorrectly (0 ms)
+[----------] 9 tests from WideStringToUtf8Test (0 ms total)
+
+[----------] 2 tests from RandomTest
+[ RUN      ] RandomTest.GeneratesNumbersWithinRange
+[       OK ] RandomTest.GeneratesNumbersWithinRange (0 ms)
+[ RUN      ] RandomTest.RepeatsWhenReseeded
+[       OK ] RandomTest.RepeatsWhenReseeded (0 ms)
+[----------] 2 tests from RandomTest (0 ms total)
+
+[----------] 3 tests from ContainerUtilityTest
+[ RUN      ] ContainerUtilityTest.CountIf
+[       OK ] ContainerUtilityTest.CountIf (0 ms)
+[ RUN      ] ContainerUtilityTest.ForEach
+[       OK ] ContainerUtilityTest.ForEach (0 ms)
+[ RUN      ] ContainerUtilityTest.GetElementOr
+[       OK ] ContainerUtilityTest.GetElementOr (1 ms)
+[----------] 3 tests from ContainerUtilityTest (1 ms total)
+
+[----------] 7 tests from VectorShuffleTest
+[ RUN      ] VectorShuffleTest.HandlesEmptyRange
+[       OK ] VectorShuffleTest.HandlesEmptyRange (0 ms)
+[ RUN      ] VectorShuffleTest.HandlesRangeOfSizeOne
+[       OK ] VectorShuffleTest.HandlesRangeOfSizeOne (0 ms)
+[ RUN      ] VectorShuffleTest.ShufflesEntireVector
+[       OK ] VectorShuffleTest.ShufflesEntireVector (0 ms)
+[ RUN      ] VectorShuffleTest.ShufflesStartOfVector
+[       OK ] VectorShuffleTest.ShufflesStartOfVector (0 ms)
+[ RUN      ] VectorShuffleTest.ShufflesEndOfVector
+[       OK ] VectorShuffleTest.ShufflesEndOfVector (0 ms)
+[ RUN      ] VectorShuffleTest.ShufflesMiddleOfVector
+[       OK ] VectorShuffleTest.ShufflesMiddleOfVector (0 ms)
+[ RUN      ] VectorShuffleTest.ShufflesRepeatably
+[       OK ] VectorShuffleTest.ShufflesRepeatably (0 ms)
+[----------] 7 tests from VectorShuffleTest (0 ms total)
+
+[----------] 1 test from AssertHelperTest
+[ RUN      ] AssertHelperTest.AssertHelperIsSmall
+[       OK ] AssertHelperTest.AssertHelperIsSmall (0 ms)
+[----------] 1 test from AssertHelperTest (0 ms total)
+
+[----------] 18 tests from StringTest
+[ RUN      ] StringTest.Constructors
+[       OK ] StringTest.Constructors (0 ms)
+[ RUN      ] StringTest.ConvertsFromStdString
+[       OK ] StringTest.ConvertsFromStdString (0 ms)
+[ RUN      ] StringTest.ConvertsToStdString
+[       OK ] StringTest.ConvertsToStdString (0 ms)
+[ RUN      ] StringTest.ShowCStringQuoted
+[       OK ] StringTest.ShowCStringQuoted (0 ms)
+[ RUN      ] StringTest.Empty
+[       OK ] StringTest.Empty (0 ms)
+[ RUN      ] StringTest.Compare
+[       OK ] StringTest.Compare (0 ms)
+[ RUN      ] StringTest.Equals
+[       OK ] StringTest.Equals (0 ms)
+[ RUN      ] StringTest.NotEquals
+[       OK ] StringTest.NotEquals (0 ms)
+[ RUN      ] StringTest.Length
+[       OK ] StringTest.Length (0 ms)
+[ RUN      ] StringTest.EndsWith
+[       OK ] StringTest.EndsWith (0 ms)
+[ RUN      ] StringTest.EndsWithCaseInsensitive
+[       OK ] StringTest.EndsWithCaseInsensitive (0 ms)
+[ RUN      ] StringTest.CaseInsensitiveWideCStringEquals
+[       OK ] StringTest.CaseInsensitiveWideCStringEquals (0 ms)
+[ RUN      ] StringTest.CanBeAssignedNULL
+[       OK ] StringTest.CanBeAssignedNULL (0 ms)
+[ RUN      ] StringTest.CanBeAssignedEmpty
+[       OK ] StringTest.CanBeAssignedEmpty (0 ms)
+[ RUN      ] StringTest.CanBeAssignedNonEmpty
+[       OK ] StringTest.CanBeAssignedNonEmpty (0 ms)
+[ RUN      ] StringTest.CanBeAssignedSelf
+[       OK ] StringTest.CanBeAssignedSelf (0 ms)
+[ RUN      ] StringTest.Streams
+[       OK ] StringTest.Streams (0 ms)
+[ RUN      ] StringTest.FormatWorks
+[       OK ] StringTest.FormatWorks (0 ms)
+[----------] 18 tests from StringTest (0 ms total)
+
+[----------] 4 tests from TestPropertyTest
+[ RUN      ] TestPropertyTest.StringValue
+[       OK ] TestPropertyTest.StringValue (0 ms)
+[ RUN      ] TestPropertyTest.ReplaceStringValue
+[       OK ] TestPropertyTest.ReplaceStringValue (0 ms)
+[ RUN      ] TestPropertyTest.ConstructorWorks
+[       OK ] TestPropertyTest.ConstructorWorks (0 ms)
+[ RUN      ] TestPropertyTest.SetValue
+[       OK ] TestPropertyTest.SetValue (0 ms)
+[----------] 4 tests from TestPropertyTest (0 ms total)
+
+[----------] 2 tests from ScopedFakeTestPartResultReporterTest
+[ RUN      ] ScopedFakeTestPartResultReporterTest.InterceptsTestFailures
+[       OK ] ScopedFakeTestPartResultReporterTest.InterceptsTestFailures (0 ms)
+[ RUN      ] ScopedFakeTestPartResultReporterTest.DeprecatedConstructor
+[       OK ] ScopedFakeTestPartResultReporterTest.DeprecatedConstructor (1 ms)
+[----------] 2 tests from ScopedFakeTestPartResultReporterTest (1 ms total)
+
+[----------] 1 test from ScopedFakeTestPartResultReporterWithThreadsTest
+[ RUN      ] ScopedFakeTestPartResultReporterWithThreadsTest.InterceptsTestFailuresInAllThreads
+[       OK ] ScopedFakeTestPartResultReporterWithThreadsTest.InterceptsTestFailuresInAllThreads (0 ms)
+[----------] 1 test from ScopedFakeTestPartResultReporterWithThreadsTest (0 ms total)
+
+[----------] 6 tests from ExpectFatalFailureTest
+[ RUN      ] ExpectFatalFailureTest.CatchesFatalFaliure
+[       OK ] ExpectFatalFailureTest.CatchesFatalFaliure (0 ms)
+[ RUN      ] ExpectFatalFailureTest.AcceptsStdStringObject
+[       OK ] ExpectFatalFailureTest.AcceptsStdStringObject (0 ms)
+[ RUN      ] ExpectFatalFailureTest.CatchesFatalFailureOnAllThreads
+[       OK ] ExpectFatalFailureTest.CatchesFatalFailureOnAllThreads (0 ms)
+[ RUN      ] ExpectFatalFailureTest.CanBeUsedInNonVoidFunction
+[       OK ] ExpectFatalFailureTest.CanBeUsedInNonVoidFunction (0 ms)
+[ RUN      ] ExpectFatalFailureTest.DoesNotAbort
+[       OK ] ExpectFatalFailureTest.DoesNotAbort (0 ms)
+[ RUN      ] ExpectFatalFailureTest.AcceptsMacroThatExpandsToUnprotectedComma
+[       OK ] ExpectFatalFailureTest.AcceptsMacroThatExpandsToUnprotectedComma (0 ms)
+[----------] 6 tests from ExpectFatalFailureTest (0 ms total)
+
+[----------] 4 tests from ExpectNonfatalFailureTest
+[ RUN      ] ExpectNonfatalFailureTest.CatchesNonfatalFailure
+[       OK ] ExpectNonfatalFailureTest.CatchesNonfatalFailure (0 ms)
+[ RUN      ] ExpectNonfatalFailureTest.AcceptsStdStringObject
+[       OK ] ExpectNonfatalFailureTest.AcceptsStdStringObject (0 ms)
+[ RUN      ] ExpectNonfatalFailureTest.CatchesNonfatalFailureOnAllThreads
+[       OK ] ExpectNonfatalFailureTest.CatchesNonfatalFailureOnAllThreads (0 ms)
+[ RUN      ] ExpectNonfatalFailureTest.AcceptsMacroThatExpandsToUnprotectedComma
+[       OK ] ExpectNonfatalFailureTest.AcceptsMacroThatExpandsToUnprotectedComma (0 ms)
+[----------] 4 tests from ExpectNonfatalFailureTest (7 ms total)
+
+[----------] 2 tests from ExpectFailureWithThreadsTest
+[ RUN      ] ExpectFailureWithThreadsTest.ExpectFatalFailureOnAllThreads
+[       OK ] ExpectFailureWithThreadsTest.ExpectFatalFailureOnAllThreads (0 ms)
+[ RUN      ] ExpectFailureWithThreadsTest.ExpectNonFatalFailureOnAllThreads
+[       OK ] ExpectFailureWithThreadsTest.ExpectNonFatalFailureOnAllThreads (0 ms)
+[----------] 2 tests from ExpectFailureWithThreadsTest (0 ms total)
+
+[----------] 3 tests from TestResultTest
+[ RUN      ] TestResultTest.total_part_count
+[       OK ] TestResultTest.total_part_count (0 ms)
+[ RUN      ] TestResultTest.Passed
+[       OK ] TestResultTest.Passed (0 ms)
+[ RUN      ] TestResultTest.Failed
+[       OK ] TestResultTest.Failed (0 ms)
+[----------] 3 tests from TestResultTest (1 ms total)
+
+[----------] 8 tests from TestResultPropertyTest
+[ RUN      ] TestResultPropertyTest.NoPropertiesFoundWhenNoneAreAdded
+[       OK ] TestResultPropertyTest.NoPropertiesFoundWhenNoneAreAdded (0 ms)
+[ RUN      ] TestResultPropertyTest.OnePropertyFoundWhenAdded
+[       OK ] TestResultPropertyTest.OnePropertyFoundWhenAdded (0 ms)
+[ RUN      ] TestResultPropertyTest.MultiplePropertiesFoundWhenAdded
+[       OK ] TestResultPropertyTest.MultiplePropertiesFoundWhenAdded (0 ms)
+[ RUN      ] TestResultPropertyTest.OverridesValuesForDuplicateKeys
+[       OK ] TestResultPropertyTest.OverridesValuesForDuplicateKeys (0 ms)
+[ RUN      ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledName
+[       OK ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledName (0 ms)
+[ RUN      ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledStatus
+[       OK ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledStatus (0 ms)
+[ RUN      ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledTime
+[       OK ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledTime (0 ms)
+[ RUN      ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledClassname
+[       OK ] TestResultPropertyTest.AddFailureWhenUsingReservedKeyCalledClassname (0 ms)
+[----------] 8 tests from TestResultPropertyTest (0 ms total)
+
+[----------] 2 tests from GTestFlagSaverTest
+[ RUN      ] GTestFlagSaverTest.ModifyGTestFlags
+[       OK ] GTestFlagSaverTest.ModifyGTestFlags (0 ms)
+[ RUN      ] GTestFlagSaverTest.VerifyGTestFlags
+[       OK ] GTestFlagSaverTest.VerifyGTestFlags (0 ms)
+[----------] 2 tests from GTestFlagSaverTest (0 ms total)
+
+[----------] 4 tests from Int32FromGTestEnvTest
+[ RUN      ] Int32FromGTestEnvTest.ReturnsDefaultWhenVariableIsNotSet
+[       OK ] Int32FromGTestEnvTest.ReturnsDefaultWhenVariableIsNotSet (0 ms)
+[ RUN      ] Int32FromGTestEnvTest.ReturnsDefaultWhenValueOverflows
+(expecting 2 warnings)
+WARNING: Environment variable GTEST_TEMP is expected to be a 32-bit integer, but actually has value 12345678987654321, which overflows.
+The default value 20 is used.
+WARNING: Environment variable GTEST_TEMP is expected to be a 32-bit integer, but actually has value -12345678987654321, which overflows.
+The default value 30 is used.
+[       OK ] Int32FromGTestEnvTest.ReturnsDefaultWhenValueOverflows (0 ms)
+[ RUN      ] Int32FromGTestEnvTest.ReturnsDefaultWhenValueIsInvalid
+(expecting 2 warnings)
+WARNING: Environment variable GTEST_TEMP is expected to be a 32-bit integer, but actually has value "A1".
+The default value 40 is used.
+WARNING: Environment variable GTEST_TEMP is expected to be a 32-bit integer, but actually has value "12X".
+The default value 50 is used.
+[       OK ] Int32FromGTestEnvTest.ReturnsDefaultWhenValueIsInvalid (0 ms)
+[ RUN      ] Int32FromGTestEnvTest.ParsesAndReturnsValidValue
+[       OK ] Int32FromGTestEnvTest.ParsesAndReturnsValidValue (0 ms)
+[----------] 4 tests from Int32FromGTestEnvTest (0 ms total)
+
+[----------] 4 tests from ParseInt32FlagTest
+[ RUN      ] ParseInt32FlagTest.ReturnsFalseForInvalidFlag
+[       OK ] ParseInt32FlagTest.ReturnsFalseForInvalidFlag (0 ms)
+[ RUN      ] ParseInt32FlagTest.ReturnsDefaultWhenValueOverflows
+(expecting 2 warnings)
+[       OK ] ParseInt32FlagTest.ReturnsDefaultWhenValueOverflows (0 ms)
+[ RUN      ] ParseInt32FlagTest.ReturnsDefaultWhenValueIsInvalid
+(expecting 2 warnings)
+[       OK ] ParseInt32FlagTest.ReturnsDefaultWhenValueIsInvalid (0 ms)
+[ RUN      ] ParseInt32FlagTest.ParsesAndReturnsValidValue
+[       OK ] ParseInt32FlagTest.ParsesAndReturnsValidValue (0 ms)
+[----------] 4 tests from ParseInt32FlagTest (0 ms total)
+
+[----------] 1 test from Int32FromEnvOrDieTest
+[ RUN      ] Int32FromEnvOrDieTest.ParsesAndReturnsValidValue
+[       OK ] Int32FromEnvOrDieTest.ParsesAndReturnsValidValue (0 ms)
+[----------] 1 test from Int32FromEnvOrDieTest (0 ms total)
+
+[----------] 2 tests from ShouldRunTestOnShardTest
+[ RUN      ] ShouldRunTestOnShardTest.IsPartitionWhenThereIsOneShard
+[       OK ] ShouldRunTestOnShardTest.IsPartitionWhenThereIsOneShard (0 ms)
+[ RUN      ] ShouldRunTestOnShardTest.IsPartitionWhenThereAreFiveShards
+[       OK ] ShouldRunTestOnShardTest.IsPartitionWhenThereAreFiveShards (0 ms)
+[----------] 2 tests from ShouldRunTestOnShardTest (0 ms total)
+
+[----------] 3 tests from ShouldShardTest
+[ RUN      ] ShouldShardTest.ReturnsFalseWhenNeitherEnvVarIsSet
+[       OK ] ShouldShardTest.ReturnsFalseWhenNeitherEnvVarIsSet (0 ms)
+[ RUN      ] ShouldShardTest.ReturnsFalseWhenTotalShardIsOne
+[       OK ] ShouldShardTest.ReturnsFalseWhenTotalShardIsOne (0 ms)
+[ RUN      ] ShouldShardTest.WorksWhenShardEnvVarsAreValid
+[       OK ] ShouldShardTest.WorksWhenShardEnvVarsAreValid (0 ms)
+[----------] 3 tests from ShouldShardTest (19 ms total)
+
+[----------] 1 test from UnitTestTest
+[ RUN      ] UnitTestTest.CanGetOriginalWorkingDir
+[       OK ] UnitTestTest.CanGetOriginalWorkingDir (1 ms)
+[----------] 1 test from UnitTestTest (1 ms total)
+
+[----------] 3 tests from Pred1Test
+[ RUN      ] Pred1Test.WithoutFormat
+[       OK ] Pred1Test.WithoutFormat (0 ms)
+[ RUN      ] Pred1Test.WithFormat
+[       OK ] Pred1Test.WithFormat (0 ms)
+[ RUN      ] Pred1Test.SingleEvaluationOnFailure
+[       OK ] Pred1Test.SingleEvaluationOnFailure (0 ms)
+[----------] 3 tests from Pred1Test (0 ms total)
+
+[----------] 3 tests from PredTest
+[ RUN      ] PredTest.WithoutFormat
+[       OK ] PredTest.WithoutFormat (0 ms)
+[ RUN      ] PredTest.WithFormat
+[       OK ] PredTest.WithFormat (0 ms)
+[ RUN      ] PredTest.SingleEvaluationOnFailure
+[       OK ] PredTest.SingleEvaluationOnFailure (0 ms)
+[----------] 3 tests from PredTest (0 ms total)
+
+[----------] 2 tests from PredicateAssertionTest
+[ RUN      ] PredicateAssertionTest.AcceptsOverloadedFunction
+[       OK ] PredicateAssertionTest.AcceptsOverloadedFunction (0 ms)
+[ RUN      ] PredicateAssertionTest.AcceptsTemplateFunction
+[       OK ] PredicateAssertionTest.AcceptsTemplateFunction (0 ms)
+[----------] 2 tests from PredicateAssertionTest (1 ms total)
+
+[----------] 2 tests from PredicateFormatAssertionTest
+[ RUN      ] PredicateFormatAssertionTest.AcceptsOverloadedFunction
+[       OK ] PredicateFormatAssertionTest.AcceptsOverloadedFunction (0 ms)
+[ RUN      ] PredicateFormatAssertionTest.AcceptsTemplateFunction
+[       OK ] PredicateFormatAssertionTest.AcceptsTemplateFunction (0 ms)
+[----------] 2 tests from PredicateFormatAssertionTest (0 ms total)
+
+[----------] 8 tests from StringAssertionTest
+[ RUN      ] StringAssertionTest.ASSERT_STREQ
+[       OK ] StringAssertionTest.ASSERT_STREQ (0 ms)
+[ RUN      ] StringAssertionTest.ASSERT_STREQ_Null
+[       OK ] StringAssertionTest.ASSERT_STREQ_Null (0 ms)
+[ RUN      ] StringAssertionTest.ASSERT_STREQ_Null2
+[       OK ] StringAssertionTest.ASSERT_STREQ_Null2 (0 ms)
+[ RUN      ] StringAssertionTest.ASSERT_STRNE
+[       OK ] StringAssertionTest.ASSERT_STRNE (0 ms)
+[ RUN      ] StringAssertionTest.ASSERT_STRCASEEQ
+[       OK ] StringAssertionTest.ASSERT_STRCASEEQ (0 ms)
+[ RUN      ] StringAssertionTest.ASSERT_STRCASENE
+[       OK ] StringAssertionTest.ASSERT_STRCASENE (0 ms)
+[ RUN      ] StringAssertionTest.STREQ_Wide
+[       OK ] StringAssertionTest.STREQ_Wide (0 ms)
+[ RUN      ] StringAssertionTest.STRNE_Wide
+[       OK ] StringAssertionTest.STRNE_Wide (0 ms)
+[----------] 8 tests from StringAssertionTest (0 ms total)
+
+[----------] 6 tests from IsSubstringTest
+[ RUN      ] IsSubstringTest.ReturnsCorrectResultForCString
+[       OK ] IsSubstringTest.ReturnsCorrectResultForCString (1 ms)
+[ RUN      ] IsSubstringTest.ReturnsCorrectResultForWideCString
+[       OK ] IsSubstringTest.ReturnsCorrectResultForWideCString (0 ms)
+[ RUN      ] IsSubstringTest.GeneratesCorrectMessageForCString
+[       OK ] IsSubstringTest.GeneratesCorrectMessageForCString (0 ms)
+[ RUN      ] IsSubstringTest.ReturnsCorrectResultsForStdString
+[       OK ] IsSubstringTest.ReturnsCorrectResultsForStdString (0 ms)
+[ RUN      ] IsSubstringTest.ReturnsCorrectResultForStdWstring
+[       OK ] IsSubstringTest.ReturnsCorrectResultForStdWstring (0 ms)
+[ RUN      ] IsSubstringTest.GeneratesCorrectMessageForWstring
+[       OK ] IsSubstringTest.GeneratesCorrectMessageForWstring (0 ms)
+[----------] 6 tests from IsSubstringTest (1 ms total)
+
+[----------] 6 tests from IsNotSubstringTest
+[ RUN      ] IsNotSubstringTest.ReturnsCorrectResultForCString
+[       OK ] IsNotSubstringTest.ReturnsCorrectResultForCString (1 ms)
+[ RUN      ] IsNotSubstringTest.ReturnsCorrectResultForWideCString
+[       OK ] IsNotSubstringTest.ReturnsCorrectResultForWideCString (0 ms)
+[ RUN      ] IsNotSubstringTest.GeneratesCorrectMessageForWideCString
+[       OK ] IsNotSubstringTest.GeneratesCorrectMessageForWideCString (0 ms)
+[ RUN      ] IsNotSubstringTest.ReturnsCorrectResultsForStdString
+[       OK ] IsNotSubstringTest.ReturnsCorrectResultsForStdString (0 ms)
+[ RUN      ] IsNotSubstringTest.GeneratesCorrectMessageForStdString
+[       OK ] IsNotSubstringTest.GeneratesCorrectMessageForStdString (0 ms)
+[ RUN      ] IsNotSubstringTest.ReturnsCorrectResultForStdWstring
+[       OK ] IsNotSubstringTest.ReturnsCorrectResultForStdWstring (0 ms)
+[----------] 6 tests from IsNotSubstringTest (1 ms total)
+
+[----------] 13 tests from FloatTest
+[ RUN      ] FloatTest.Size
+[       OK ] FloatTest.Size (0 ms)
+[ RUN      ] FloatTest.Zeros
+[       OK ] FloatTest.Zeros (0 ms)
+[ RUN      ] FloatTest.AlmostZeros
+[       OK ] FloatTest.AlmostZeros (1 ms)
+[ RUN      ] FloatTest.SmallDiff
+[       OK ] FloatTest.SmallDiff (0 ms)
+[ RUN      ] FloatTest.LargeDiff
+[       OK ] FloatTest.LargeDiff (0 ms)
+[ RUN      ] FloatTest.Infinity
+[       OK ] FloatTest.Infinity (0 ms)
+[ RUN      ] FloatTest.NaN
+[       OK ] FloatTest.NaN (0 ms)
+[ RUN      ] FloatTest.Reflexive
+[       OK ] FloatTest.Reflexive (0 ms)
+[ RUN      ] FloatTest.Commutative
+[       OK ] FloatTest.Commutative (0 ms)
+[ RUN      ] FloatTest.EXPECT_NEAR
+[       OK ] FloatTest.EXPECT_NEAR (0 ms)
+[ RUN      ] FloatTest.ASSERT_NEAR
+[       OK ] FloatTest.ASSERT_NEAR (0 ms)
+[ RUN      ] FloatTest.FloatLESucceeds
+[       OK ] FloatTest.FloatLESucceeds (0 ms)
+[ RUN      ] FloatTest.FloatLEFails
+[       OK ] FloatTest.FloatLEFails (1 ms)
+[----------] 13 tests from FloatTest (2 ms total)
+
+[----------] 13 tests from DoubleTest
+[ RUN      ] DoubleTest.Size
+[       OK ] DoubleTest.Size (0 ms)
+[ RUN      ] DoubleTest.Zeros
+[       OK ] DoubleTest.Zeros (0 ms)
+[ RUN      ] DoubleTest.AlmostZeros
+[       OK ] DoubleTest.AlmostZeros (0 ms)
+[ RUN      ] DoubleTest.SmallDiff
+[       OK ] DoubleTest.SmallDiff (0 ms)
+[ RUN      ] DoubleTest.LargeDiff
+[       OK ] DoubleTest.LargeDiff (0 ms)
+[ RUN      ] DoubleTest.Infinity
+[       OK ] DoubleTest.Infinity (0 ms)
+[ RUN      ] DoubleTest.NaN
+[       OK ] DoubleTest.NaN (0 ms)
+[ RUN      ] DoubleTest.Reflexive
+[       OK ] DoubleTest.Reflexive (0 ms)
+[ RUN      ] DoubleTest.Commutative
+[       OK ] DoubleTest.Commutative (0 ms)
+[ RUN      ] DoubleTest.EXPECT_NEAR
+[       OK ] DoubleTest.EXPECT_NEAR (1 ms)
+[ RUN      ] DoubleTest.ASSERT_NEAR
+[       OK ] DoubleTest.ASSERT_NEAR (0 ms)
+[ RUN      ] DoubleTest.DoubleLESucceeds
+[       OK ] DoubleTest.DoubleLESucceeds (0 ms)
+[ RUN      ] DoubleTest.DoubleLEFails
+[       OK ] DoubleTest.DoubleLEFails (0 ms)
+[----------] 13 tests from DoubleTest (9 ms total)
+
+[----------] 1 test from DisabledTest
+[ RUN      ] DisabledTest.NotDISABLED_TestShouldRun
+[       OK ] DisabledTest.NotDISABLED_TestShouldRun (0 ms)
+[----------] 1 test from DisabledTest (0 ms total)
+
+[----------] 5 tests from SingleEvaluationTest
+[ RUN      ] SingleEvaluationTest.FailedASSERT_STREQ
+[       OK ] SingleEvaluationTest.FailedASSERT_STREQ (0 ms)
+[ RUN      ] SingleEvaluationTest.ASSERT_STR
+[       OK ] SingleEvaluationTest.ASSERT_STR (0 ms)
+[ RUN      ] SingleEvaluationTest.FailedASSERT_NE
+[       OK ] SingleEvaluationTest.FailedASSERT_NE (0 ms)
+[ RUN      ] SingleEvaluationTest.OtherCases
+[       OK ] SingleEvaluationTest.OtherCases (0 ms)
+[ RUN      ] SingleEvaluationTest.ExceptionTests
+[       OK ] SingleEvaluationTest.ExceptionTests (0 ms)
+[----------] 5 tests from SingleEvaluationTest (0 ms total)
+
+[----------] 5 tests from NoFatalFailureTest
+[ RUN      ] NoFatalFailureTest.NoFailure
+[       OK ] NoFatalFailureTest.NoFailure (0 ms)
+[ RUN      ] NoFatalFailureTest.NonFatalIsNoFailure
+[       OK ] NoFatalFailureTest.NonFatalIsNoFailure (0 ms)
+[ RUN      ] NoFatalFailureTest.AssertNoFatalFailureOnFatalFailure
+[       OK ] NoFatalFailureTest.AssertNoFatalFailureOnFatalFailure (0 ms)
+[ RUN      ] NoFatalFailureTest.ExpectNoFatalFailureOnFatalFailure
+[       OK ] NoFatalFailureTest.ExpectNoFatalFailureOnFatalFailure (0 ms)
+[ RUN      ] NoFatalFailureTest.MessageIsStreamable
+[       OK ] NoFatalFailureTest.MessageIsStreamable (0 ms)
+[----------] 5 tests from NoFatalFailureTest (0 ms total)
+
+[----------] 22 tests from AssertionTest
+[ RUN      ] AssertionTest.EqFailure
+[       OK ] AssertionTest.EqFailure (0 ms)
+[ RUN      ] AssertionTest.AppendUserMessage
+[       OK ] AssertionTest.AppendUserMessage (0 ms)
+[ RUN      ] AssertionTest.ASSERT_TRUE
+[       OK ] AssertionTest.ASSERT_TRUE (0 ms)
+[ RUN      ] AssertionTest.AssertTrueWithAssertionResult
+[       OK ] AssertionTest.AssertTrueWithAssertionResult (0 ms)
+[ RUN      ] AssertionTest.ASSERT_FALSE
+[       OK ] AssertionTest.ASSERT_FALSE (0 ms)
+[ RUN      ] AssertionTest.AssertFalseWithAssertionResult
+[       OK ] AssertionTest.AssertFalseWithAssertionResult (0 ms)
+[ RUN      ] AssertionTest.ASSERT_EQ
+[       OK ] AssertionTest.ASSERT_EQ (0 ms)
+[ RUN      ] AssertionTest.ASSERT_EQ_NULL
+[       OK ] AssertionTest.ASSERT_EQ_NULL (0 ms)
+[ RUN      ] AssertionTest.ASSERT_NE
+[       OK ] AssertionTest.ASSERT_NE (0 ms)
+[ RUN      ] AssertionTest.ASSERT_LE
+[       OK ] AssertionTest.ASSERT_LE (0 ms)
+[ RUN      ] AssertionTest.ASSERT_LT
+[       OK ] AssertionTest.ASSERT_LT (0 ms)
+[ RUN      ] AssertionTest.ASSERT_GE
+[       OK ] AssertionTest.ASSERT_GE (0 ms)
+[ RUN      ] AssertionTest.ASSERT_GT
+[       OK ] AssertionTest.ASSERT_GT (0 ms)
+[ RUN      ] AssertionTest.ASSERT_THROW
+[       OK ] AssertionTest.ASSERT_THROW (0 ms)
+[ RUN      ] AssertionTest.ASSERT_NO_THROW
+[       OK ] AssertionTest.ASSERT_NO_THROW (0 ms)
+[ RUN      ] AssertionTest.ASSERT_ANY_THROW
+[       OK ] AssertionTest.ASSERT_ANY_THROW (0 ms)
+[ RUN      ] AssertionTest.AssertPrecedence
+[       OK ] AssertionTest.AssertPrecedence (0 ms)
+[ RUN      ] AssertionTest.NonFixtureSubroutine
+[       OK ] AssertionTest.NonFixtureSubroutine (0 ms)
+[ RUN      ] AssertionTest.AssertWorksWithUncopyableObject
+[       OK ] AssertionTest.AssertWorksWithUncopyableObject (0 ms)
+[ RUN      ] AssertionTest.ExpectWorksWithUncopyableObject
+[       OK ] AssertionTest.ExpectWorksWithUncopyableObject (0 ms)
+[ RUN      ] AssertionTest.NamedEnum
+[       OK ] AssertionTest.NamedEnum (0 ms)
+[ RUN      ] AssertionTest.AnonymousEnum
+[       OK ] AssertionTest.AnonymousEnum (0 ms)
+[----------] 22 tests from AssertionTest (1 ms total)
+
+[----------] 19 tests from ExpectTest
+[ RUN      ] ExpectTest.ASSERT_EQ_Double
+[       OK ] ExpectTest.ASSERT_EQ_Double (1 ms)
+[ RUN      ] ExpectTest.ASSERT_EQ_0
+[       OK ] ExpectTest.ASSERT_EQ_0 (0 ms)
+[ RUN      ] ExpectTest.EXPECT_TRUE
+[       OK ] ExpectTest.EXPECT_TRUE (0 ms)
+[ RUN      ] ExpectTest.ExpectTrueWithAssertionResult
+[       OK ] ExpectTest.ExpectTrueWithAssertionResult (0 ms)
+[ RUN      ] ExpectTest.EXPECT_FALSE
+[       OK ] ExpectTest.EXPECT_FALSE (0 ms)
+[ RUN      ] ExpectTest.ExpectFalseWithAssertionResult
+[       OK ] ExpectTest.ExpectFalseWithAssertionResult (0 ms)
+[ RUN      ] ExpectTest.EXPECT_EQ
+[       OK ] ExpectTest.EXPECT_EQ (0 ms)
+[ RUN      ] ExpectTest.EXPECT_EQ_Double
+[       OK ] ExpectTest.EXPECT_EQ_Double (0 ms)
+[ RUN      ] ExpectTest.EXPECT_EQ_NULL
+[       OK ] ExpectTest.EXPECT_EQ_NULL (0 ms)
+[ RUN      ] ExpectTest.EXPECT_EQ_0
+[       OK ] ExpectTest.EXPECT_EQ_0 (0 ms)
+[ RUN      ] ExpectTest.EXPECT_NE
+[       OK ] ExpectTest.EXPECT_NE (0 ms)
+[ RUN      ] ExpectTest.EXPECT_LE
+[       OK ] ExpectTest.EXPECT_LE (0 ms)
+[ RUN      ] ExpectTest.EXPECT_LT
+[       OK ] ExpectTest.EXPECT_LT (0 ms)
+[ RUN      ] ExpectTest.EXPECT_GE
+[       OK ] ExpectTest.EXPECT_GE (0 ms)
+[ RUN      ] ExpectTest.EXPECT_GT
+[       OK ] ExpectTest.EXPECT_GT (0 ms)
+[ RUN      ] ExpectTest.EXPECT_THROW
+[       OK ] ExpectTest.EXPECT_THROW (0 ms)
+[ RUN      ] ExpectTest.EXPECT_NO_THROW
+[       OK ] ExpectTest.EXPECT_NO_THROW (1 ms)
+[ RUN      ] ExpectTest.EXPECT_ANY_THROW
+[       OK ] ExpectTest.EXPECT_ANY_THROW (1 ms)
+[ RUN      ] ExpectTest.ExpectPrecedence
+[       OK ] ExpectTest.ExpectPrecedence (0 ms)
+[----------] 19 tests from ExpectTest (15 ms total)
+
+[----------] 5 tests from AssertionSyntaxTest
+[ RUN      ] AssertionSyntaxTest.BasicAssertionsBehavesLikeSingleStatement
+[       OK ] AssertionSyntaxTest.BasicAssertionsBehavesLikeSingleStatement (0 ms)
+[ RUN      ] AssertionSyntaxTest.ExceptionAssertionsBehavesLikeSingleStatement
+[       OK ] AssertionSyntaxTest.ExceptionAssertionsBehavesLikeSingleStatement (0 ms)
+[ RUN      ] AssertionSyntaxTest.NoFatalFailureAssertionsBehavesLikeSingleStatement
+[       OK ] AssertionSyntaxTest.NoFatalFailureAssertionsBehavesLikeSingleStatement (0 ms)
+[ RUN      ] AssertionSyntaxTest.WorksWithSwitch
+[       OK ] AssertionSyntaxTest.WorksWithSwitch (0 ms)
+[ RUN      ] AssertionSyntaxTest.WorksWithConst
+[       OK ] AssertionSyntaxTest.WorksWithConst (0 ms)
+[----------] 5 tests from AssertionSyntaxTest (0 ms total)
+
+[----------] 1 test from ExpectThrowTest
+[ RUN      ] ExpectThrowTest.DoesNotGenerateUnreachableCodeWarning
+[       OK ] ExpectThrowTest.DoesNotGenerateUnreachableCodeWarning (1 ms)
+[----------] 1 test from ExpectThrowTest (1 ms total)
+
+[----------] 5 tests from SuccessfulAssertionTest
+[ RUN      ] SuccessfulAssertionTest.SUCCEED
+[       OK ] SuccessfulAssertionTest.SUCCEED (0 ms)
+[ RUN      ] SuccessfulAssertionTest.EXPECT
+[       OK ] SuccessfulAssertionTest.EXPECT (0 ms)
+[ RUN      ] SuccessfulAssertionTest.EXPECT_STR
+[       OK ] SuccessfulAssertionTest.EXPECT_STR (0 ms)
+[ RUN      ] SuccessfulAssertionTest.ASSERT
+[       OK ] SuccessfulAssertionTest.ASSERT (0 ms)
+[ RUN      ] SuccessfulAssertionTest.ASSERT_STR
+[       OK ] SuccessfulAssertionTest.ASSERT_STR (0 ms)
+[----------] 5 tests from SuccessfulAssertionTest (0 ms total)
+
+[----------] 5 tests from StreamableToStringTest
+[ RUN      ] StreamableToStringTest.Scalar
+[       OK ] StreamableToStringTest.Scalar (0 ms)
+[ RUN      ] StreamableToStringTest.Pointer
+[       OK ] StreamableToStringTest.Pointer (0 ms)
+[ RUN      ] StreamableToStringTest.NullPointer
+[       OK ] StreamableToStringTest.NullPointer (0 ms)
+[ RUN      ] StreamableToStringTest.CString
+[       OK ] StreamableToStringTest.CString (0 ms)
+[ RUN      ] StreamableToStringTest.NullCString
+[       OK ] StreamableToStringTest.NullCString (0 ms)
+[----------] 5 tests from StreamableToStringTest (0 ms total)
+
+[----------] 6 tests from StreamableTest
+[ RUN      ] StreamableTest.string
+[       OK ] StreamableTest.string (0 ms)
+[ RUN      ] StreamableTest.stringWithEmbeddedNUL
+[       OK ] StreamableTest.stringWithEmbeddedNUL (0 ms)
+[ RUN      ] StreamableTest.NULChar
+[       OK ] StreamableTest.NULChar (0 ms)
+[ RUN      ] StreamableTest.int
+[       OK ] StreamableTest.int (0 ms)
+[ RUN      ] StreamableTest.NullCharPtr
+[       OK ] StreamableTest.NullCharPtr (0 ms)
+[ RUN      ] StreamableTest.BasicIoManip
+[       OK ] StreamableTest.BasicIoManip (0 ms)
+[----------] 6 tests from StreamableTest (0 ms total)
+
+[----------] 4 tests from MacroTest
+[ RUN      ] MacroTest.ADD_FAILURE
+[       OK ] MacroTest.ADD_FAILURE (0 ms)
+[ RUN      ] MacroTest.ADD_FAILURE_AT
+[       OK ] MacroTest.ADD_FAILURE_AT (0 ms)
+[ RUN      ] MacroTest.FAIL
+[       OK ] MacroTest.FAIL (0 ms)
+[ RUN      ] MacroTest.SUCCEED
+[       OK ] MacroTest.SUCCEED (0 ms)
+[----------] 4 tests from MacroTest (0 ms total)
+
+[----------] 10 tests from EqAssertionTest
+[ RUN      ] EqAssertionTest.Bool
+[       OK ] EqAssertionTest.Bool (0 ms)
+[ RUN      ] EqAssertionTest.Int
+[       OK ] EqAssertionTest.Int (0 ms)
+[ RUN      ] EqAssertionTest.Time_T
+[       OK ] EqAssertionTest.Time_T (0 ms)
+[ RUN      ] EqAssertionTest.Char
+[       OK ] EqAssertionTest.Char (0 ms)
+[ RUN      ] EqAssertionTest.WideChar
+[       OK ] EqAssertionTest.WideChar (1 ms)
+[ RUN      ] EqAssertionTest.StdString
+[       OK ] EqAssertionTest.StdString (0 ms)
+[ RUN      ] EqAssertionTest.StdWideString
+[       OK ] EqAssertionTest.StdWideString (0 ms)
+[ RUN      ] EqAssertionTest.CharPointer
+[       OK ] EqAssertionTest.CharPointer (0 ms)
+[ RUN      ] EqAssertionTest.WideCharPointer
+[       OK ] EqAssertionTest.WideCharPointer (0 ms)
+[ RUN      ] EqAssertionTest.OtherPointer
+[       OK ] EqAssertionTest.OtherPointer (0 ms)
+[----------] 10 tests from EqAssertionTest (1 ms total)
+
+[----------] 1 test from ComparisonAssertionTest
+[ RUN      ] ComparisonAssertionTest.AcceptsUnprintableArgs
+[       OK ] ComparisonAssertionTest.AcceptsUnprintableArgs (1 ms)
+[----------] 1 test from ComparisonAssertionTest (1 ms total)
+
+[----------] 1 test from FRIEND_TEST_Test
+[ RUN      ] FRIEND_TEST_Test.TEST
+[       OK ] FRIEND_TEST_Test.TEST (0 ms)
+[----------] 1 test from FRIEND_TEST_Test (0 ms total)
+
+[----------] 1 test from FRIEND_TEST_Test2
+[ RUN      ] FRIEND_TEST_Test2.TEST_F
+[       OK ] FRIEND_TEST_Test2.TEST_F (0 ms)
+[----------] 1 test from FRIEND_TEST_Test2 (0 ms total)
+
+[----------] 2 tests from TestLifeCycleTest
+[ RUN      ] TestLifeCycleTest.Test1
+[       OK ] TestLifeCycleTest.Test1 (0 ms)
+[ RUN      ] TestLifeCycleTest.Test2
+[       OK ] TestLifeCycleTest.Test2 (0 ms)
+[----------] 2 tests from TestLifeCycleTest (0 ms total)
+
+[----------] 5 tests from AssertionResultTest
+[ RUN      ] AssertionResultTest.CopyConstructorWorksWhenNotOptimied
+[       OK ] AssertionResultTest.CopyConstructorWorksWhenNotOptimied (0 ms)
+[ RUN      ] AssertionResultTest.ConstructionWorks
+[       OK ] AssertionResultTest.ConstructionWorks (0 ms)
+[ RUN      ] AssertionResultTest.NegationWorks
+[       OK ] AssertionResultTest.NegationWorks (0 ms)
+[ RUN      ] AssertionResultTest.StreamingWorks
+[       OK ] AssertionResultTest.StreamingWorks (0 ms)
+[ RUN      ] AssertionResultTest.CanStreamOstreamManipulators
+[       OK ] AssertionResultTest.CanStreamOstreamManipulators (0 ms)
+[----------] 5 tests from AssertionResultTest (7 ms total)
+
+[----------] 2 tests from TestInfoTest
+[ RUN      ] TestInfoTest.Names
+[       OK ] TestInfoTest.Names (0 ms)
+[ RUN      ] TestInfoTest.result
+[       OK ] TestInfoTest.result (0 ms)
+[----------] 2 tests from TestInfoTest (0 ms total)
+
+[----------] 2 tests from SetUpTestCaseTest
+Setting up the test case . . .
+[ RUN      ] SetUpTestCaseTest.Test1
+[       OK ] SetUpTestCaseTest.Test1 (0 ms)
+[ RUN      ] SetUpTestCaseTest.Test2
+[       OK ] SetUpTestCaseTest.Test2 (0 ms)
+Tearing down the test case . . .
+[----------] 2 tests from SetUpTestCaseTest (0 ms total)
+
+[----------] 41 tests from InitGoogleTestTest
+[ RUN      ] InitGoogleTestTest.Empty
+[       OK ] InitGoogleTestTest.Empty (0 ms)
+[ RUN      ] InitGoogleTestTest.NoFlag
+[       OK ] InitGoogleTestTest.NoFlag (0 ms)
+[ RUN      ] InitGoogleTestTest.FilterBad
+[       OK ] InitGoogleTestTest.FilterBad (1 ms)
+[ RUN      ] InitGoogleTestTest.FilterEmpty
+[       OK ] InitGoogleTestTest.FilterEmpty (0 ms)
+[ RUN      ] InitGoogleTestTest.FilterNonEmpty
+[       OK ] InitGoogleTestTest.FilterNonEmpty (0 ms)
+[ RUN      ] InitGoogleTestTest.BreakOnFailureWithoutValue
+[       OK ] InitGoogleTestTest.BreakOnFailureWithoutValue (0 ms)
+[ RUN      ] InitGoogleTestTest.BreakOnFailureFalse_0
+[       OK ] InitGoogleTestTest.BreakOnFailureFalse_0 (0 ms)
+[ RUN      ] InitGoogleTestTest.BreakOnFailureFalse_f
+[       OK ] InitGoogleTestTest.BreakOnFailureFalse_f (0 ms)
+[ RUN      ] InitGoogleTestTest.BreakOnFailureFalse_F
+[       OK ] InitGoogleTestTest.BreakOnFailureFalse_F (0 ms)
+[ RUN      ] InitGoogleTestTest.BreakOnFailureTrue
+[       OK ] InitGoogleTestTest.BreakOnFailureTrue (0 ms)
+[ RUN      ] InitGoogleTestTest.CatchExceptions
+[       OK ] InitGoogleTestTest.CatchExceptions (0 ms)
+[ RUN      ] InitGoogleTestTest.DeathTestUseFork
+[       OK ] InitGoogleTestTest.DeathTestUseFork (0 ms)
+[ RUN      ] InitGoogleTestTest.DuplicatedFlags
+[       OK ] InitGoogleTestTest.DuplicatedFlags (0 ms)
+[ RUN      ] InitGoogleTestTest.UnrecognizedFlag
+[       OK ] InitGoogleTestTest.UnrecognizedFlag (0 ms)
+[ RUN      ] InitGoogleTestTest.ListTestsFlag
+[       OK ] InitGoogleTestTest.ListTestsFlag (0 ms)
+[ RUN      ] InitGoogleTestTest.ListTestsTrue
+[       OK ] InitGoogleTestTest.ListTestsTrue (0 ms)
+[ RUN      ] InitGoogleTestTest.ListTestsFalse
+[       OK ] InitGoogleTestTest.ListTestsFalse (0 ms)
+[ RUN      ] InitGoogleTestTest.ListTestsFalse_f
+[       OK ] InitGoogleTestTest.ListTestsFalse_f (0 ms)
+[ RUN      ] InitGoogleTestTest.ListTestsFalse_F
+[       OK ] InitGoogleTestTest.ListTestsFalse_F (0 ms)
+[ RUN      ] InitGoogleTestTest.OutputEmpty
+[       OK ] InitGoogleTestTest.OutputEmpty (0 ms)
+[ RUN      ] InitGoogleTestTest.OutputXml
+[       OK ] InitGoogleTestTest.OutputXml (0 ms)
+[ RUN      ] InitGoogleTestTest.OutputXmlFile
+[       OK ] InitGoogleTestTest.OutputXmlFile (0 ms)
+[ RUN      ] InitGoogleTestTest.OutputXmlDirectory
+[       OK ] InitGoogleTestTest.OutputXmlDirectory (0 ms)
+[ RUN      ] InitGoogleTestTest.PrintTimeFlag
+[       OK ] InitGoogleTestTest.PrintTimeFlag (0 ms)
+[ RUN      ] InitGoogleTestTest.PrintTimeTrue
+[       OK ] InitGoogleTestTest.PrintTimeTrue (0 ms)
+[ RUN      ] InitGoogleTestTest.PrintTimeFalse
+[       OK ] InitGoogleTestTest.PrintTimeFalse (0 ms)
+[ RUN      ] InitGoogleTestTest.PrintTimeFalse_f
+[       OK ] InitGoogleTestTest.PrintTimeFalse_f (1 ms)
+[ RUN      ] InitGoogleTestTest.PrintTimeFalse_F
+[       OK ] InitGoogleTestTest.PrintTimeFalse_F (0 ms)
+[ RUN      ] InitGoogleTestTest.RandomSeed
+[       OK ] InitGoogleTestTest.RandomSeed (0 ms)
+[ RUN      ] InitGoogleTestTest.Repeat
+[       OK ] InitGoogleTestTest.Repeat (0 ms)
+[ RUN      ] InitGoogleTestTest.AlsoRunDisabledTestsFlag
+[       OK ] InitGoogleTestTest.AlsoRunDisabledTestsFlag (0 ms)
+[ RUN      ] InitGoogleTestTest.AlsoRunDisabledTestsTrue
+[       OK ] InitGoogleTestTest.AlsoRunDisabledTestsTrue (0 ms)
+[ RUN      ] InitGoogleTestTest.AlsoRunDisabledTestsFalse
+[       OK ] InitGoogleTestTest.AlsoRunDisabledTestsFalse (0 ms)
+[ RUN      ] InitGoogleTestTest.ShuffleWithoutValue
+[       OK ] InitGoogleTestTest.ShuffleWithoutValue (0 ms)
+[ RUN      ] InitGoogleTestTest.ShuffleFalse_0
+[       OK ] InitGoogleTestTest.ShuffleFalse_0 (0 ms)
+[ RUN      ] InitGoogleTestTest.ShuffleTrue
+[       OK ] InitGoogleTestTest.ShuffleTrue (0 ms)
+[ RUN      ] InitGoogleTestTest.StackTraceDepth
+[       OK ] InitGoogleTestTest.StackTraceDepth (0 ms)
+[ RUN      ] InitGoogleTestTest.StreamResultTo
+[       OK ] InitGoogleTestTest.StreamResultTo (0 ms)
+[ RUN      ] InitGoogleTestTest.ThrowOnFailureWithoutValue
+[       OK ] InitGoogleTestTest.ThrowOnFailureWithoutValue (0 ms)
+[ RUN      ] InitGoogleTestTest.ThrowOnFailureFalse_0
+[       OK ] InitGoogleTestTest.ThrowOnFailureFalse_0 (0 ms)
+[ RUN      ] InitGoogleTestTest.ThrowOnFailureTrue
+[       OK ] InitGoogleTestTest.ThrowOnFailureTrue (0 ms)
+[----------] 41 tests from InitGoogleTestTest (3 ms total)
+
+[----------] 2 tests from CurrentTestInfoTest
+[ RUN      ] CurrentTestInfoTest.WorksForFirstTestInATestCase
+[       OK ] CurrentTestInfoTest.WorksForFirstTestInATestCase (0 ms)
+[ RUN      ] CurrentTestInfoTest.WorksForSecondTestInATestCase
+[       OK ] CurrentTestInfoTest.WorksForSecondTestInATestCase (0 ms)
+[----------] 2 tests from CurrentTestInfoTest (0 ms total)
+
+[----------] 2 tests from NestedTestingNamespaceTest
+[ RUN      ] NestedTestingNamespaceTest.Success
+[       OK ] NestedTestingNamespaceTest.Success (0 ms)
+[ RUN      ] NestedTestingNamespaceTest.Failure
+[       OK ] NestedTestingNamespaceTest.Failure (0 ms)
+[----------] 2 tests from NestedTestingNamespaceTest (0 ms total)
+
+[----------] 13 tests from StreamingAssertionsTest
+[ RUN      ] StreamingAssertionsTest.Unconditional
+[       OK ] StreamingAssertionsTest.Unconditional (1 ms)
+[ RUN      ] StreamingAssertionsTest.Truth
+[       OK ] StreamingAssertionsTest.Truth (0 ms)
+[ RUN      ] StreamingAssertionsTest.Truth2
+[       OK ] StreamingAssertionsTest.Truth2 (0 ms)
+[ RUN      ] StreamingAssertionsTest.IntegerEquals
+[       OK ] StreamingAssertionsTest.IntegerEquals (0 ms)
+[ RUN      ] StreamingAssertionsTest.IntegerLessThan
+[       OK ] StreamingAssertionsTest.IntegerLessThan (0 ms)
+[ RUN      ] StreamingAssertionsTest.StringsEqual
+[       OK ] StreamingAssertionsTest.StringsEqual (0 ms)
+[ RUN      ] StreamingAssertionsTest.StringsNotEqual
+[       OK ] StreamingAssertionsTest.StringsNotEqual (0 ms)
+[ RUN      ] StreamingAssertionsTest.StringsEqualIgnoringCase
+[       OK ] StreamingAssertionsTest.StringsEqualIgnoringCase (0 ms)
+[ RUN      ] StreamingAssertionsTest.StringNotEqualIgnoringCase
+[       OK ] StreamingAssertionsTest.StringNotEqualIgnoringCase (0 ms)
+[ RUN      ] StreamingAssertionsTest.FloatingPointEquals
+[       OK ] StreamingAssertionsTest.FloatingPointEquals (0 ms)
+[ RUN      ] StreamingAssertionsTest.Throw
+[       OK ] StreamingAssertionsTest.Throw (0 ms)
+[ RUN      ] StreamingAssertionsTest.NoThrow
+[       OK ] StreamingAssertionsTest.NoThrow (0 ms)
+[ RUN      ] StreamingAssertionsTest.AnyThrow
+[       OK ] StreamingAssertionsTest.AnyThrow (0 ms)
+[----------] 13 tests from StreamingAssertionsTest (1 ms total)
+
+[----------] 6 tests from ColoredOutputTest
+[ RUN      ] ColoredOutputTest.UsesColorsWhenGTestColorFlagIsYes
+[       OK ] ColoredOutputTest.UsesColorsWhenGTestColorFlagIsYes (0 ms)
+[ RUN      ] ColoredOutputTest.UsesColorsWhenGTestColorFlagIsAliasOfYes
+[       OK ] ColoredOutputTest.UsesColorsWhenGTestColorFlagIsAliasOfYes (0 ms)
+[ RUN      ] ColoredOutputTest.UsesNoColorWhenGTestColorFlagIsNo
+[       OK ] ColoredOutputTest.UsesNoColorWhenGTestColorFlagIsNo (0 ms)
+[ RUN      ] ColoredOutputTest.UsesNoColorWhenGTestColorFlagIsInvalid
+[       OK ] ColoredOutputTest.UsesNoColorWhenGTestColorFlagIsInvalid (0 ms)
+[ RUN      ] ColoredOutputTest.UsesColorsWhenStdoutIsTty
+[       OK ] ColoredOutputTest.UsesColorsWhenStdoutIsTty (0 ms)
+[ RUN      ] ColoredOutputTest.UsesColorsWhenTermSupportsColors
+[       OK ] ColoredOutputTest.UsesColorsWhenTermSupportsColors (0 ms)
+[----------] 6 tests from ColoredOutputTest (0 ms total)
+
+[----------] 2 tests from StaticAssertTypeEqTest
+[ RUN      ] StaticAssertTypeEqTest.WorksInClass
+[       OK ] StaticAssertTypeEqTest.WorksInClass (0 ms)
+[ RUN      ] StaticAssertTypeEqTest.CompilesForEqualTypes
+[       OK ] StaticAssertTypeEqTest.CompilesForEqualTypes (0 ms)
+[----------] 2 tests from StaticAssertTypeEqTest (14 ms total)
+
+[----------] 1 test from GetCurrentOsStackTraceExceptTopTest
+[ RUN      ] GetCurrentOsStackTraceExceptTopTest.ReturnsTheStackTrace
+[       OK ] GetCurrentOsStackTraceExceptTopTest.ReturnsTheStackTrace (0 ms)
+[----------] 1 test from GetCurrentOsStackTraceExceptTopTest (0 ms total)
+
+[----------] 6 tests from HasNonfatalFailureTest
+[ RUN      ] HasNonfatalFailureTest.ReturnsFalseWhenThereIsNoFailure
+[       OK ] HasNonfatalFailureTest.ReturnsFalseWhenThereIsNoFailure (0 ms)
+[ RUN      ] HasNonfatalFailureTest.ReturnsFalseWhenThereIsOnlyFatalFailure
+./test/gtest_unittest.cc:6536: Failure
+Failed
+[       OK ] HasNonfatalFailureTest.ReturnsFalseWhenThereIsOnlyFatalFailure (0 ms)
+[ RUN      ] HasNonfatalFailureTest.ReturnsTrueWhenThereIsNonfatalFailure
+./test/gtest_unittest.cc:6546: Failure
+Failed
+[       OK ] HasNonfatalFailureTest.ReturnsTrueWhenThereIsNonfatalFailure (0 ms)
+[ RUN      ] HasNonfatalFailureTest.ReturnsTrueWhenThereAreFatalAndNonfatalFailures
+./test/gtest_unittest.cc:6536: Failure
+Failed
+./test/gtest_unittest.cc:6554: Failure
+Failed
+[       OK ] HasNonfatalFailureTest.ReturnsTrueWhenThereAreFatalAndNonfatalFailures (0 ms)
+[ RUN      ] HasNonfatalFailureTest.WorksOutsideOfTestBody
+[       OK ] HasNonfatalFailureTest.WorksOutsideOfTestBody (0 ms)
+[ RUN      ] HasNonfatalFailureTest.WorksOutsideOfTestBody2
+./test/gtest_unittest.cc:6570: Failure
+Failed
+[       OK ] HasNonfatalFailureTest.WorksOutsideOfTestBody2 (0 ms)
+[----------] 6 tests from HasNonfatalFailureTest (1 ms total)
+
+[----------] 6 tests from HasFailureTest
+[ RUN      ] HasFailureTest.ReturnsFalseWhenThereIsNoFailure
+[       OK ] HasFailureTest.ReturnsFalseWhenThereIsNoFailure (0 ms)
+[ RUN      ] HasFailureTest.ReturnsTrueWhenThereIsFatalFailure
+./test/gtest_unittest.cc:6536: Failure
+Failed
+[       OK ] HasFailureTest.ReturnsTrueWhenThereIsFatalFailure (0 ms)
+[ RUN      ] HasFailureTest.ReturnsTrueWhenThereIsNonfatalFailure
+./test/gtest_unittest.cc:6588: Failure
+Failed
+[       OK ] HasFailureTest.ReturnsTrueWhenThereIsNonfatalFailure (0 ms)
+[ RUN      ] HasFailureTest.ReturnsTrueWhenThereAreFatalAndNonfatalFailures
+./test/gtest_unittest.cc:6536: Failure
+Failed
+./test/gtest_unittest.cc:6596: Failure
+Failed
+[       OK ] HasFailureTest.ReturnsTrueWhenThereAreFatalAndNonfatalFailures (0 ms)
+[ RUN      ] HasFailureTest.WorksOutsideOfTestBody
+[       OK ] HasFailureTest.WorksOutsideOfTestBody (0 ms)
+[ RUN      ] HasFailureTest.WorksOutsideOfTestBody2
+./test/gtest_unittest.cc:6610: Failure
+Failed
+[       OK ] HasFailureTest.WorksOutsideOfTestBody2 (0 ms)
+[----------] 6 tests from HasFailureTest (0 ms total)
+
+[----------] 4 tests from TestEventListenersTest
+[ RUN      ] TestEventListenersTest.ConstructionWorks
+[       OK ] TestEventListenersTest.ConstructionWorks (0 ms)
+[ RUN      ] TestEventListenersTest.DestructionWorks
+[       OK ] TestEventListenersTest.DestructionWorks (0 ms)
+[ RUN      ] TestEventListenersTest.Append
+[       OK ] TestEventListenersTest.Append (0 ms)
+[ RUN      ] TestEventListenersTest.Release
+[       OK ] TestEventListenersTest.Release (0 ms)
+[----------] 4 tests from TestEventListenersTest (0 ms total)
+
+[----------] 6 tests from EventListenerTest
+[ RUN      ] EventListenerTest.AppendKeepsOrder
+[       OK ] EventListenerTest.AppendKeepsOrder (0 ms)
+[ RUN      ] EventListenerTest.SuppressEventForwarding
+[       OK ] EventListenerTest.SuppressEventForwarding (0 ms)
+[ RUN      ] EventListenerTest.default_result_printer
+[       OK ] EventListenerTest.default_result_printer (0 ms)
+[ RUN      ] EventListenerTest.RemovingDefaultResultPrinterWorks
+[       OK ] EventListenerTest.RemovingDefaultResultPrinterWorks (0 ms)
+[ RUN      ] EventListenerTest.default_xml_generator
+[       OK ] EventListenerTest.default_xml_generator (0 ms)
+[ RUN      ] EventListenerTest.RemovingDefaultXmlGeneratorWorks
+[       OK ] EventListenerTest.RemovingDefaultXmlGeneratorWorks (0 ms)
+[----------] 6 tests from EventListenerTest (8 ms total)
+
+[----------] 1 test from AlternativeNameTest
+[ RUN      ] AlternativeNameTest.Works
+[       OK ] AlternativeNameTest.Works (0 ms)
+[----------] 1 test from AlternativeNameTest (0 ms total)
+
+[----------] 3 tests from IsAProtocolMessageTest
+[ RUN      ] IsAProtocolMessageTest.ValueIsCompileTimeConstant
+[       OK ] IsAProtocolMessageTest.ValueIsCompileTimeConstant (0 ms)
+[ RUN      ] IsAProtocolMessageTest.ValueIsTrueWhenTypeIsAProtocolMessage
+[       OK ] IsAProtocolMessageTest.ValueIsTrueWhenTypeIsAProtocolMessage (0 ms)
+[ RUN      ] IsAProtocolMessageTest.ValueIsFalseWhenTypeIsNotAProtocolMessage
+[       OK ] IsAProtocolMessageTest.ValueIsFalseWhenTypeIsNotAProtocolMessage (0 ms)
+[----------] 3 tests from IsAProtocolMessageTest (0 ms total)
+
+[----------] 1 test from CompileAssertTypesEqual
+[ RUN      ] CompileAssertTypesEqual.CompilesWhenTypesAreEqual
+[       OK ] CompileAssertTypesEqual.CompilesWhenTypesAreEqual (0 ms)
+[----------] 1 test from CompileAssertTypesEqual (0 ms total)
+
+[----------] 3 tests from RemoveReferenceTest
+[ RUN      ] RemoveReferenceTest.DoesNotAffectNonReferenceType
+[       OK ] RemoveReferenceTest.DoesNotAffectNonReferenceType (0 ms)
+[ RUN      ] RemoveReferenceTest.RemovesReference
+[       OK ] RemoveReferenceTest.RemovesReference (0 ms)
+[ RUN      ] RemoveReferenceTest.MacroVersion
+[       OK ] RemoveReferenceTest.MacroVersion (0 ms)
+[----------] 3 tests from RemoveReferenceTest (0 ms total)
+
+[----------] 3 tests from RemoveConstTest
+[ RUN      ] RemoveConstTest.DoesNotAffectNonConstType
+[       OK ] RemoveConstTest.DoesNotAffectNonConstType (0 ms)
+[ RUN      ] RemoveConstTest.RemovesConst
+[       OK ] RemoveConstTest.RemovesConst (0 ms)
+[ RUN      ] RemoveConstTest.MacroVersion
+[       OK ] RemoveConstTest.MacroVersion (0 ms)
+[----------] 3 tests from RemoveConstTest (0 ms total)
+
+[----------] 1 test from RemoveReferenceToConstTest
+[ RUN      ] RemoveReferenceToConstTest.Works
+[       OK ] RemoveReferenceToConstTest.Works (0 ms)
+[----------] 1 test from RemoveReferenceToConstTest (0 ms total)
+
+[----------] 3 tests from AddReferenceTest
+[ RUN      ] AddReferenceTest.DoesNotAffectReferenceType
+[       OK ] AddReferenceTest.DoesNotAffectReferenceType (0 ms)
+[ RUN      ] AddReferenceTest.AddsReference
+[       OK ] AddReferenceTest.AddsReference (0 ms)
+[ RUN      ] AddReferenceTest.MacroVersion
+[       OK ] AddReferenceTest.MacroVersion (0 ms)
+[----------] 3 tests from AddReferenceTest (0 ms total)
+
+[----------] 1 test from GTestReferenceToConstTest
+[ RUN      ] GTestReferenceToConstTest.Works
+[       OK ] GTestReferenceToConstTest.Works (0 ms)
+[----------] 1 test from GTestReferenceToConstTest (0 ms total)
+
+[----------] 3 tests from ImplicitlyConvertibleTest
+[ RUN      ] ImplicitlyConvertibleTest.ValueIsCompileTimeConstant
+[       OK ] ImplicitlyConvertibleTest.ValueIsCompileTimeConstant (0 ms)
+[ RUN      ] ImplicitlyConvertibleTest.ValueIsTrueWhenConvertible
+[       OK ] ImplicitlyConvertibleTest.ValueIsTrueWhenConvertible (0 ms)
+[ RUN      ] ImplicitlyConvertibleTest.ValueIsFalseWhenNotConvertible
+[       OK ] ImplicitlyConvertibleTest.ValueIsFalseWhenNotConvertible (0 ms)
+[----------] 3 tests from ImplicitlyConvertibleTest (0 ms total)
+
+[----------] 2 tests from IsContainerTestTest
+[ RUN      ] IsContainerTestTest.WorksForNonContainer
+[       OK ] IsContainerTestTest.WorksForNonContainer (0 ms)
+[ RUN      ] IsContainerTestTest.WorksForContainer
+[       OK ] IsContainerTestTest.WorksForContainer (0 ms)
+[----------] 2 tests from IsContainerTestTest (0 ms total)
+
+[----------] 3 tests from ArrayEqTest
+[ RUN      ] ArrayEqTest.WorksForDegeneratedArrays
+[       OK ] ArrayEqTest.WorksForDegeneratedArrays (0 ms)
+[ RUN      ] ArrayEqTest.WorksForOneDimensionalArrays
+[       OK ] ArrayEqTest.WorksForOneDimensionalArrays (0 ms)
+[ RUN      ] ArrayEqTest.WorksForTwoDimensionalArrays
+[       OK ] ArrayEqTest.WorksForTwoDimensionalArrays (0 ms)
+[----------] 3 tests from ArrayEqTest (0 ms total)
+
+[----------] 2 tests from ArrayAwareFindTest
+[ RUN      ] ArrayAwareFindTest.WorksForOneDimensionalArray
+[       OK ] ArrayAwareFindTest.WorksForOneDimensionalArray (0 ms)
+[ RUN      ] ArrayAwareFindTest.WorksForTwoDimensionalArray
+[       OK ] ArrayAwareFindTest.WorksForTwoDimensionalArray (0 ms)
+[----------] 2 tests from ArrayAwareFindTest (0 ms total)
+
+[----------] 3 tests from CopyArrayTest
+[ RUN      ] CopyArrayTest.WorksForDegeneratedArrays
+[       OK ] CopyArrayTest.WorksForDegeneratedArrays (0 ms)
+[ RUN      ] CopyArrayTest.WorksForOneDimensionalArrays
+[       OK ] CopyArrayTest.WorksForOneDimensionalArrays (0 ms)
+[ RUN      ] CopyArrayTest.WorksForTwoDimensionalArrays
+[       OK ] CopyArrayTest.WorksForTwoDimensionalArrays (0 ms)
+[----------] 3 tests from CopyArrayTest (0 ms total)
+
+[----------] 5 tests from NativeArrayTest
+[ RUN      ] NativeArrayTest.ConstructorFromArrayWorks
+[       OK ] NativeArrayTest.ConstructorFromArrayWorks (0 ms)
+[ RUN      ] NativeArrayTest.CreatesAndDeletesCopyOfArrayWhenAskedTo
+[       OK ] NativeArrayTest.CreatesAndDeletesCopyOfArrayWhenAskedTo (0 ms)
+[ RUN      ] NativeArrayTest.TypeMembersAreCorrect
+[       OK ] NativeArrayTest.TypeMembersAreCorrect (0 ms)
+[ RUN      ] NativeArrayTest.MethodsWork
+[       OK ] NativeArrayTest.MethodsWork (0 ms)
+[ RUN      ] NativeArrayTest.WorksForTwoDimensionalArray
+[       OK ] NativeArrayTest.WorksForTwoDimensionalArray (0 ms)
+[----------] 5 tests from NativeArrayTest (0 ms total)
+
+[----------] 2 tests from SkipPrefixTest
+[ RUN      ] SkipPrefixTest.SkipsWhenPrefixMatches
+[       OK ] SkipPrefixTest.SkipsWhenPrefixMatches (0 ms)
+[ RUN      ] SkipPrefixTest.DoesNotSkipWhenPrefixDoesNotMatch
+[       OK ] SkipPrefixTest.DoesNotSkipWhenPrefixDoesNotMatch (0 ms)
+[----------] 2 tests from SkipPrefixTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 748 tests from 168 test cases ran. (2262 ms total)
+[  PASSED  ] 748 tests.
+
+  YOU HAVE 13 DISABLED TESTS
+
+PASS: test/gtest_all_test
+Running main() from gtest_main.cc
+[==========] Running 6 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from FactorialTest
+[ RUN      ] FactorialTest.Negative
+[       OK ] FactorialTest.Negative (0 ms)
+[ RUN      ] FactorialTest.Zero
+[       OK ] FactorialTest.Zero (0 ms)
+[ RUN      ] FactorialTest.Positive
+[       OK ] FactorialTest.Positive (0 ms)
+[----------] 3 tests from FactorialTest (0 ms total)
+
+[----------] 3 tests from IsPrimeTest
+[ RUN      ] IsPrimeTest.Negative
+[       OK ] IsPrimeTest.Negative (0 ms)
+[ RUN      ] IsPrimeTest.Trivial
+[       OK ] IsPrimeTest.Trivial (0 ms)
+[ RUN      ] IsPrimeTest.Positive
+[       OK ] IsPrimeTest.Positive (0 ms)
+[----------] 3 tests from IsPrimeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 6 tests.
+PASS: test/fused_gtest_test
+==================
+All 4 tests passed
+==================
+make[1]: Leaving directory `/home/barajas/gtest-1.6.0'
+barajas@perversa:~/gtest-1.6.0$ 

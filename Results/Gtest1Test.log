@@ -1,0 +1,38 @@
+barajas@perversa:~/gtest-1.6.0/make$ make
+g++ -I../include -g -Wall -Wextra -c ../samples/sample1.cc
+g++ -I../include -g -Wall -Wextra -c ../samples/sample1_unittest.cc
+g++ -I../include -I.. -g -Wall -Wextra -c \
+            ../src/gtest-all.cc
+g++ -I../include -I.. -g -Wall -Wextra -c \
+            ../src/gtest_main.cc
+ar rv gtest_main.a gtest-all.o gtest_main.o
+ar: creating gtest_main.a
+a - gtest-all.o
+a - gtest_main.o
+g++ -I../include -g -Wall -Wextra -lpthread sample1.o sample1_unittest.o gtest_main.a -o sample1_unittest
+barajas@perversa:~/gtest-1.6.0/make$ ./sample1_unittest 
+Running main() from gtest_main.cc
+[==========] Running 6 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 3 tests from FactorialTest
+[ RUN      ] FactorialTest.Negative
+[       OK ] FactorialTest.Negative (0 ms)
+[ RUN      ] FactorialTest.Zero
+[       OK ] FactorialTest.Zero (0 ms)
+[ RUN      ] FactorialTest.Positive
+[       OK ] FactorialTest.Positive (0 ms)
+[----------] 3 tests from FactorialTest (0 ms total)
+
+[----------] 3 tests from IsPrimeTest
+[ RUN      ] IsPrimeTest.Negative
+[       OK ] IsPrimeTest.Negative (0 ms)
+[ RUN      ] IsPrimeTest.Trivial
+[       OK ] IsPrimeTest.Trivial (0 ms)
+[ RUN      ] IsPrimeTest.Positive
+[       OK ] IsPrimeTest.Positive (0 ms)
+[----------] 3 tests from IsPrimeTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 6 tests from 2 test cases ran. (0 ms total)
+[  PASSED  ] 6 tests.
+
