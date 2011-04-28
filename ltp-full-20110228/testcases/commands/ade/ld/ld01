@@ -58,10 +58,12 @@ mkdir $TCtmp
 grep "$LD:" $TCtmp/errmsg.out | grep [xy].obj | grep -q "No such file or directory"
 if [ $? -eq 0 ]
 then
-	echo  "-)"
+	echo  "PASSED :-)"
+	echo 0 >> /home/barajas/lda1.txt
 else
 	echo "FAIL -  ld failed to give expected error msg"
 	do_cleanup
+	echo 1 >> /home/barajas/lda1.txt
 	exit 1
 fi
 
@@ -82,10 +84,12 @@ EOF
 diff -iw $TCtmp/errmsg.out $TCtmp/errmsg.exp
 if [ $? -eq 0 ]
 then
-	echo  "-)"
+	echo  "PASSED -)"
+	echo 0 >> /home/barajas/lda2.txt
 else
 	echo "FAIL -  ld failed to give expected error msg"
 	do_cleanup
+	echo 1 >> /home/barajas/lda2.txt
 	exit 1
 fi
 
@@ -105,10 +109,12 @@ cat $TCtmp/errmsg.out | grep "$LD:" | grep "bad/[xy].obj:" | grep -q "No such fi
 #diff -iw  $TCtmp/errmsg.out $TCtmp/errmsg.exp
 if [ $? -eq 0 ]
 then
-	echo  "-)"
+	echo  "PASSED -)"
+	echo 0 >> /home/barajas/lda3.txt
 else
 	echo "FAIL -  ld failed to give expected error msg"
 	do_cleanup
+	echo 1 >> /home/barajas/lda3.txt
 	exit 1
 fi
 
@@ -128,10 +134,12 @@ EOF
 diff -iw  $TCtmp/errmsg.out $TCtmp/errmsg.exp
 if [ $? -eq 0 ]
 then
-	echo  "-)"
+	echo  "PASSED -)"
+	echo 0 >> /home/barajas/lda4.txt
 else
 	echo "FAIL -  ld failed to give expected error msg"
 	do_cleanup
+	echo 1 >> /home/barajas/lda4.txt
 	exit 1
 fi
 
@@ -148,10 +156,12 @@ else
 fi
 file $TCtmp/test.lib | grep -q shared
 if [ $? -eq 0 ]; then
-	echo "-)"
+	echo "PASSED -)"
+	echo 0 >> /home/barajas/lda5.txt
 else
 	echo "FAIL - ld failed to build a shared object"
 	do_cleanup
+	echo 1 >> /home/barajas/lda5.txt
 	exit 1
 fi
 
@@ -181,11 +191,13 @@ if [ $? -ne 0 ] ; then
 elif [ "$1" -le "2"  -a "$2" -le "15" ]; then
 	if [ $rc_code -eq 0 ]
 	then
-		echo "-)"
+		echo "PASSED -)"
+		echo 0 >> /home/barajas/lda6.txt
 	else
 		echo "FAIL - ld 9 failed ignore the -Bstatic option with \
 		      shared objects"
 		do_cleanup
+		echo 1 >> /home/barajas/lda6.txt
 		exit 1
 	fi
 
@@ -195,9 +207,11 @@ else
 		echo "FAIL - ld failed to  reject the -Bstatic option \
 		      with shared objects"
 		do_cleanup
+		echo 1 >> /home/barajas/lda6.txt
 		exit 1
 	else
-		echo "-)"
+		echo "PASSED -)"
+		echo 0 >> /home/barajas/lda6.txt
 	fi
 fi # end of checking for ld version less than 2.16	
 
@@ -220,10 +234,12 @@ grep -q  "could not read symbols: Invalid operation" $TCtmp/errmsg.out
 rc_grep=$?
 grep -q "ld: attempted static link of dynamic object" $TCtmp/errmsg.out
 if [ $rc_grep -eq 0  -o $? -eq 0 ]; then 
-	echo "-)"
+	echo "PASSED -)"
+	echo 0 >> /home/barajas/lda7.txt
 else
 	echo "FAIL - ld failed to give expected error msg"
 	do_cleanup
+	echo 0 >> /home/barajas/lda7.txt
 	exit 1
 fi
 
